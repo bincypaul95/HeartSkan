@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="A+ve(positive)" />
+    <item
+    android:title="B+ve(positive)"
+    />
+    <item
+        android:title="AB+ve(positive)"
+        />
+    <item
+        android:title="A-ve(Negative)"
+        />
+    <item
+        android:title="B-ve(Negative)"
+        />
+    <item
+        android:title="AB-ve(Negative)"
+        />
+    <item
+        android:title="O+ve(positive)"
+        />
+    <item
+        android:title="O-ve(Negative)"
+        />
+</menu>

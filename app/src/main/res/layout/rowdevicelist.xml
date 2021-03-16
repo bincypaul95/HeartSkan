@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="devicename"
+            type="String" />
+        <variable
+            name="devicemac"
+            type="String" />
+        <variable
+            name="devicemodel"
+            type="com.evitalz.homevitalz.cardfit.ui.model.MyDeviceModel" />
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.PairHandler" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_height="100dp"
+                android:id="@+id/ivecg"
+                android:src="@drawable/pm10"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivecg"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="@{devicemodel.devicename}"
+                    android:padding="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:id="@+id/tvdevname"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvdevname"
+                    app:layout_constraintLeft_toRightOf="@+id/ivecg"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:text="@{String.valueOf(devicemodel.devicemac)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:id="@+id/tvmacname"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/select"
+                    android:padding="5dp"
+                    android:id="@+id/btnselect"
+                    android:onClick="@{() -> handler.onPairClicked(devicemodel)}"
+                    android:layout_margin="10dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivcheck"
+                    android:visibility="gone"
+                    android:src="@drawable/check_mark"
+                  />
+            </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

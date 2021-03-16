@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="devicereadings"
+            type="com.evitalz.homevitalz.cardfit.database.Device_Readings" />
+        <variable
+            name="handlerreading"
+            type="com.evitalz.homevitalz.cardfit.HandlerShowTimeline" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linshowtimeline"
+        android:onClick="@{ () -> handlerreading.onUpdateClicked(devicereadings)}"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="@{devicereadings.formattedTime}"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:gravity="center_horizontal" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="3dp"
+                android:background="#DEDEDE"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/ivCircle"
+                app:layout_constraintRight_toRightOf="@id/ivCircle"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/ivCircle" />
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/circle"
+                android:src="@drawable/blood1"
+                android:id="@+id/ivCircle"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:layout_width="3dp"
+                android:background="#DEDEDE"
+                app:layout_constraintTop_toBottomOf="@id/ivCircle"
+                app:layout_constraintLeft_toLeftOf="@id/ivCircle"
+                app:layout_constraintRight_toRightOf="@id/ivCircle"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{devicereadings.dread5+ " "+"mg/dl"}'
+                android:paddingTop="5dp"
+                app:layout_constraintLeft_toLeftOf="@id/tvdread2"
+                app:layout_constraintTop_toBottomOf="@id/tvdread2"
+                android:id="@+id/tvdread3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{devicereadings.dread2}'
+                android:paddingTop="5dp"
+                app:layout_constraintLeft_toLeftOf="@id/tvdread2"
+                app:layout_constraintTop_toBottomOf="@id/tvdread3"
+                android:id="@+id/tvdread4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{devicereadings.note}'
+                android:paddingTop="5dp"
+                app:layout_constraintLeft_toLeftOf="@id/tvdread2"
+                app:layout_constraintTop_toBottomOf="@id/tvdread4"
+                android:id="@+id/tvdread5" />
+
+            <TextView
+                android:id="@+id/tvdread2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text='@{devicereadings.dread1+ " "+"mmol/L"}'
+                app:layout_constraintLeft_toLeftOf="@id/tvdread1"
+                app:layout_constraintTop_toBottomOf="@id/tvdread1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/ivCircle"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="@string/BloodGlucose"
+                app:layout_constraintTop_toTopOf="@id/ivCircle"
+                app:layout_constraintBottom_toBottomOf="@id/ivCircle"
+                android:id="@+id/tvdread1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:onClick="@{()-> handlerreading.onNoteClicked(devicereadings)}"
+                android:src="@drawable/shownote" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

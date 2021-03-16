@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.evitalz.homevitalz.cardfit.ui.viewmodels.Spo2Viewmodel" />
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.HandlerSpo2" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/appbar"
+                android:background="#fff"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cancel"
+                        android:id="@+id/btncancel"
+                        android:gravity="start"
+                        android:onClick="@{handler::oncancelclicked}" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnsave"
+                        android:layout_marginRight="15dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/purple_700"
+                        android:text="@{viewmodel.btnsave}"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="right"
+                        android:onClick="@{handler::onSaveClicked}" />
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/appbar"
+                android:text="@string/add_spo2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"
+                android:layout_margin="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/tvheading" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvheading"
+                android:id="@+id/linspo2"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:id="@+id/etspo2"
+                    android:maxLines="1"
+                    android:hint="SpO2"
+                    android:text="@{viewmodel.spo2}"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvunit1"
+                    android:layout_margin="10dp"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:text="%"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:fontFamily="@font/robotoregular"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/linspo2"
+                android:id="@+id/linpulse"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:id="@+id/etpulse"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{viewmodel.pulse}"
+                    android:hint="Pulse"
+                    android:inputType="number"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:text="@string/bpm"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/linpulse"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:id="@+id/lindatetime">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ettempf">
+
+                    <TextView
+                        android:id="@+id/tvdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/rectangle"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="@{viewmodel.strDate}"
+                        android:onClick="@{handler::onDateClicked}"
+                        android:fontFamily="@font/robotoregular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ffff"
+                        android:text="@string/date"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ettempf">
+
+                    <TextView
+                        android:id="@+id/tvtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/rectangle"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:text="@{viewmodel.strtime}"
+                        android:onClick="@{handler::onTimeClicked}"
+                        android:fontFamily="@font/robotoregular"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/time"
+                        android:textColor="#000"
+                        android:background="#ffff"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

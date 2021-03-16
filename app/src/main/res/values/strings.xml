@@ -1,0 +1,317 @@
+<resources>
+    <string name="app_name">carDB</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Analytics</string>
+    <string name="title_notifications">Profile</string>
+
+    <string name="home">Home</string>
+    <string name="analytics">Analytics</string>
+    <string name="profile">Profile</string>
+    <string name="add_spo2">Add SpO2</string>
+    <string name="bpm">bpm</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="sort">SORT</string>
+    <string name="filter">Filter</string>
+    <string name="add_meal">Add Meal</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">REGISTER</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="day">Day</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="evitalz_information_management_pvt_ltd">eVitalZ Information Management Pvt Ltd</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sleep">Sleep</string>
+    <string name="PairingwiththeDevice">Pairing with the Device</string>
+    <string name="PairingSuccessful">PairingSuccessful</string>
+    <string name="Nodeviceshasregisteredyet">No devices has registered yet</string>
+    <string name="spo2">SpO2</string>
+    <string name="add_new_device">Add New Device</string>
+    <string name="searching_devices">Searching Devices</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="pulseoximeter">PulseOximeter</string>
+    <string name="powered_by">Powered by</string>
+    <string name="devicenotfound">Device Not Found</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="yes">Yes</string>
+    <string name="reset">RESET</string>
+    <string name="no">No</string>
+    <string name="loading">Loading</string>
+    <string name="ErrorwhenPairingwithdeviceTryAgain">Error when Pairing with device. Try Again</string>
+    <string name="SearchingforDevices">Searching for Devices</string>
+    <string name="Connect">Connect</string>
+    <string name="aboutus">Designed for ease of use, Thermskan is a handy app created to provide you a diary to enter your body temperature. This App keeps the entered record of your temperature to have a healthy and better life.Ideal for usse at home, office or factory the temperature recorded using any thermometer can be fed into the app fields either in centigrade or Farenheit modes.The app auto converts C to F and viceversa.</string>
+    <string name="SpO2_colon">SpO2 :&#160;</string>
+    <string name="PR">PR :&#160;</string>
+    <string name="Case_colon">Case :&#160;</string>
+    <string name="SYS">SYS :&#160;</string>
+    <string name="DIA">DIA :&#160;</string>
+    <string name="Glucose">Glucose &#160;</string>
+    <string name="Glucose_c">Glucose &#160;</string>
+    <string name="Temp">Temp :&#160;</string>
+    <string name="Case">case</string>
+    <string name="SpO2">SpO2</string>
+    <string name="Abnormal995F1009F">Abnormal : 99.5 °F - 100.9 °F</string>
+    <string name="Alert95For101F">Alert : &lt;95 °F (or) &gt;101 °F </string>
+    <string name="NormalPR60andPR100">Normal : PR &gt;= 60 and PR &lt;=100</string>
+    <string name="AbnormalPR40andPR59orPR101andPR130">Abnormal : PR &gt;= 40 and PR &lt;= 59 (or) PR &gt;= 101 and PR &lt;= 130</string>
+    <string name="NormalResult1134mgdl">Normal : Result &lt;= 113.4 mg/dl</string>
+    <string name="AbnormalResult1134mgdlandResult180mgdl">Abnormal : Result &gt; 113.4 mg/dl and Result &lt;= 180 mg/dl</string>
+    <string name="AlertResult70mgdlandResult180mgdl">Alert : Result &lt; 70 mg/dl and Result &gt; 180 mg/dl</string>
+    <string name="NormalDIA60andDIA80">Normal : DIA &gt;=60 and DIA &lt;= 80</string>
+    <string name="AbnormalDIA40andDIA59orDIA80andDIA90">Abnormal : DIA &gt;= 40 and DIA &lt;= 59 (or) DIA > 80 and DIA &lt;= 90</string>
+    <string name="AlertDIA40orDIA90">Alert : DIA &lt; 40 (or) DIA &gt; 90</string>
+    <string name="NormalResult42andResult54">Normal : Result &gt;= 42% and Result &lt;= 54%</string>
+    <string name="AbnormalResult42andResult54">Abnormal : Result &lt; 42% and Result &gt; 54%</string>
+    <string name="NormalResult38andResult46">Normal : Result &gt;= 38% and Result &lt;= 46%</string>
+    <string name="AbnormalResult38andResult46">Abnormal : Result &lt; 38% and Result &gt; 46%</string>
+    <string name="NormalResult14gdLandResult18gdL">Normal : Result &gt;= 14 g/dL and Result &lt;= 18 g/dL</string>
+    <string name="AbnormalResult14gdLandResult18gdL">Abnormal : Result &lt; 14 g/dL and Result &gt; 18 g/dL</string>
+    <string name="NormalResult12gdLandResult16gdL">Normal : Result &gt;= 12 g/dL and Result &lt;= 16 g/dL</string>
+    <string name="AbnormalResult12gdLandResult16gdL">Abnormal : Result &lt; 12 g/dL and Result &gt; 16 g/dL</string>
+    <string name="DateTimeisnotvalidThedatetimeissettocurrentdatetimeThiscanhappenwhenbatteryisreplacedorfirsttimeofconnectingtodevice">Date Time is not valid. The date &amp; time is set to current date &amp; time. This can happen when battery is replaced or first time of connecting to device</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="Normal365C375C">Normal : 36.5 °C - 37.5 °C</string>
+    <string name="Abnormal375C383C">Abnormal : 37.5 °C - 38.3 °C</string>
+    <string name="Alert35Cor384C">Alert : 35 °C (or) > 38.4 °C</string>
+    <string name="NormalSpo295andSpo2100">Normal : Spo2 >= 95 and Spo2 &lt; = 100</string>
+    <string name="AbnormalSpo290andSpo294">Abnormal : Spo2 >= 90 and Spo2 &lt; = 94</string>
+    <string name="AlertSpo290">Alert : Spo2 &lt; 90</string>
+    <string name="NormalResult63mmol">Normal : Result &lt;= 6.3 mmol</string>
+    <string name="AbnormalResultmmolandResult10mmol">Abnormal : Result &gt; 6.3 mmol and Result &lt;= 10.0 mmol</string>
+    <string name="AlertResult39mmolandResult10mmol">Alert : Result &lt; 3.9 mmol and Result &gt; 10 mmol</string>
+    <string name="NormalSYS80andSYS120">Normal : SYS &gt;= 80 and SYS &lt;=120</string>
+    <string name="AbnormalSYS60andSYS80orSYS120andSYS140">Abnormal : SYS &gt;= 60 and SYS &lt; 80 (or) SYS > 120 and SYS &lt; 140 </string>
+    <string name="AlertSYS60orSYS140">Alert : SYS &lt; 60 (or) SYS &gt; 140</string>
+    <string name="NormalPR60orPR100">Normal : PR &gt; 60 (or) PR &lt; 100</string>
+    <string name="AbnormalPR39andPR60orPR100andPR130">Abnormal : PR &gt; 39 and PR &lt; 60 (or) PR &gt; 100 and PR &lt;= 130</string>
+    <string name="AlertVALUE3_0">Alert : VALUE &gt; 3.0</string>
+    <string name="NormalVALUE200">Normal : VALUE &lt; 200</string>
+    <string name="AbnormalVALUE200orVALUE240">Abnormal : VALUE &gt; 200 (or) VALUE &lt; 240</string>
+    <string name="AlertVALUE240">Alert : VALUE &gt; 240</string>
+    <string name="NormalVALUE6">Normal : VALUE &lt; 6</string>
+    <string name="AbnormalVALUE6orVALUE7">Abnormal : VALUE &gt;= 6 (or) VALUE &lt;= 7</string>
+    <string name="AlertVALUE7">Alert : VALUE &gt; 7</string>
+    <string name="Normal977F995F">Normal : 97.7 °F - 99.5 °F</string>
+    <string name="AlertPR40orPR130">Alert : PR &lt; 40 (or) PR &gt; 130</string>
+    <string name="NormalVALUE00orVALUE15">Normal : VALUE &gt;= 0.0 (or) VALUE &lt; 1.5</string>
+    <string name="AbnormalVALUE15orVALUE30">Abnormal : VALUE &gt;= 1.5 (or) VALUE &lt; 3.0</string>
+    <string name="Weight">Weight</string>
+    <string name="FastingBloodSugar">Fasting Blood Sugar</string>
+    <string name="RandomGlucoseTest">Random Glucose Test</string>
+    <string name="PostprandialGlucoseTest">Postprandial Glucose Test</string>
+    <string name="Pleaseselectthetesttype">Please select the test type..</string>
+    <string name="Confirmationtodiscardthedata">Confirmation to discard the data?</string>
+    <string name="ConnectingtoMyGlucoHealth">Connecting to MyGlucoHealth</string>
+    <string name="SelectTestType">Select Test Type</string>
+    <string name="Connected">Connected</string>
+    <string name="Disconnected">Disconnected</string>
+
+
+    <string name="Oximeter">Oximeter</string>
+    <string name="BMI">BMI</string>
+    <string name="RapidTest">Extra Test</string>
+    <string name="Ketone">Ketone</string>
+    <string name="Cholesterol">Cholesterol</string>
+    <string name="UricAcid">Uric Acid</string>
+    <string name="Hemoglobin">Hemoglobin</string>
+    <string name="Lactate">Lactate</string>
+    <string name="Breathalyzer">Breathalyzer</string>
+
+    <string name="PatientSymptoms">Patient Symptoms</string>
+    <string name="BloodPressure">Blood Pressure</string>
+    <string name="BloodGlucose">Blood Glucose</string>
+    <string name="Temperature">Temperature</string>
+    <string name="ECG">ECG</string>
+    <string name="Biovotion">Biovotion</string>
+    <string name="Comment">Comment</string>
+    <string name="DataConfirmationtoStore">Data Confirmation to Store</string>
+    <string name="Value2">Value2</string>
+    <string name="Discard">Discard</string>
+    <string name="Value3">Value3</string>
+    <string name="Value4">Value4</string>
+    <string name="No">NO</string>
+    <string name="Yes">YES</string>
+    <string name="cancel">Cancel</string>
+    <string name="DeviceName">Device Name</string>
+    <string name="DateTime">DateTime</string>
+    <string name="Value1">Value1</string>
+    <string name="Ok">Ok</string>
+    <string name="ChoosetheMethodofPlacement">Select Device Placement</string>
+    <string name="LEFTHAND">LEFT HAND</string>
+    <string name="LEFTWRIST">LEFT WRIST</string>
+    <string name="LEFTLEG">LEFT LEG</string>
+    <string name="CHEST">CHEST</string>
+    <string name="Information">Information</string>
+    <string name="Close">Close</string>
+    <string name="Checkingdatafromdevice">Checking data from device....</string>
+    <string name="NoDataFound">No Data Found</string>
+    <string name="TypeMismatch">Type Mismatch</string>
+    <string name="SettingDeviceDate">Setting Device Date</string>
+    <string name="ClearingDeviceData">Clearing Device Data</string>
+    <string name="DataReceived">Data Received</string>
+    <string name="NodataAvailable">No data Available</string>
+    <string name="HCT">HCT</string>
+    <string name="DevicenotFound">Device not Found...</string>
+    <string name="HB">HB</string>
+    <string name="Connectingtodevice">Connecting to device</string>
+    <string name="Thelastreadingismismatchedwithwhatyouchoosedtype">The last reading is mismatched with what you choosed type:</string>
+    <string name="Clickheretostartblowingprocess">Click her to start blowing process</string>
+    <string name="AddManually">Add Manually</string>
+    <string name="Loading">Loading</string>
+    <string name="Store">Store</string>
+    <string name="Note1">Note:\nIf you have issue on connectiviy or data receiving do the following steps:\ni. Switch off and on the bluetooth.\nii. Close the app and reopen.\niii. Try to connect the device for every 30 seconds.</string>
+    <string name="selected_device">SELECTED DEVICE</string>
+    <string name="connect">CONNECT</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="step1">1. Long press to switch on the device.</string>
+    <string name="step2">2. Place the curved side on the right palm, the other end to the left palm. </string>
+    <string name="step3">3. Wait for the waveform from orange to turn green till the sampling stops. Once reading taken, Press Connect..</string>
+
+    <string name="glukostep1">1. Insert strip to switch on the device.</string>
+    <string name="glukostep2">2. Sample the blood, wait for reading to  display.</string>
+    <string name="glukostep3">3. Remove the strip once reading appears. Press Connect..</string>
+
+    <string name="pair">PAIR</string>
+    <string name="cardb">carDB</string>
+    <string name="menu_bluetoothpairing">Bluetooth Pairing</string>
+    <string name="menu_exportdata">Export Data</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_productlinks">Product Link</string>
+    <string name="menu_productmanual">Product Manual</string>
+    <string name="menu_about">About</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_order">Place Order</string>
+    <string name="menu_support">Support</string>
+    <string name="menu_chat">Chat</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="no_devices_has_paired_yet">No devices has Paired Yet</string>
+    <string name="terms_and_privacy_policy">Terms and Privacy Policy</string>
+    <string name="add_blood_glucose">Add Blood Glucose</string>
+    <string name="searching_devices_make_sure_the_device_is_on">Searching Devices. Make sure the device is on.</string>
+    <string name="device_not_found">Device Not Found</string>
+    <string name="confirm_data_to_store">Confirm Data to Store</string>
+    <string name="heartrate">HeartRate</string>
+    <string name="save">SAVE</string>
+    <string name="postprandial">Postprandial</string>
+    <string name="random">Random</string>
+    <string name="height">Height</string>
+    <string name="waist">Waist</string>
+    <string name="diabetic">Diabetic</string>
+    <string name="hba1c">HbA1c</string>
+    <string name="add_liquor">Add Liquor</string>
+    <string name="fasting">Fasting</string>
+    <string name="device_placement">Device Placement</string>
+    <string name="retry">RETRY</string>
+    <string name="sign_in_to_continue">Sign in to Continue</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="email_id">Email Id</string>
+    <string name="create_a_new_account">create a new account</string>
+    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="create_pdf">CREATE PDF</string>
+    <string name="select">Select</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="drink_name">Drink Name</string>
+    <string name="add_blood_glucose_level">Add Blood Glucose Level</string>
+    <string name="note_please_take_data_before_clicking_connect_button_for_proper_connectivity">Note : Please take data before clicking CONNECT button for proper connectivity</string>
+    <string name="take_test">TAKE TEST</string>
+    <string name="bloodgroup">BloodGroup</string>
+
+    <string name="contact_us">Contact Us</string>
+    <string name="phone">Phone</string>
+    <string name="_91_73388_56444">91 73388 56444</string>
+    <string name="sales_evitalz_com">sales@evitalz.com</string>
+
+    <string name="terms2">Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</string>
+    <string name="terms3">By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</string>
+    <string name="terms1">Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://www.ThermSkan.com website (the "Service") operated by ThermSkan ("us", "we", or "our").</string>
+    <string name="links_to_other_web_sites">Links to Other Web Sites</string>
+    <string name="link1">Our Service may contain links to third-party web sites or services that are not owned or controlled by ThermSkan.</string>
+    <string name="link2">ThermSkan has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that ThermSkan shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</string>
+    <string name="link3">We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.</string>
+    <string name="termination">Termination</string>
+    <string name="termination1">We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</string>
+    <string name="termination2">All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</string>
+    <string name="governinglaw">Governing Law</string>
+    <string name="governinglaw1">These Terms shall be governed and construed in accordance with the laws of Tamil Nadu, India, without regard to its conflict of law provisions.</string>
+    <string name="governinglaw2">Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</string>
+    <string name="Changes">Changes</string>
+    <string name="Changes1">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</string>
+    <string name="Changes2">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</string>
+    <string name="ContactUs">Contact Us</string>
+    <string name="ContactUs1">If you have any questions about these Terms, please contact us via email – info@evitalz.com</string>
+    <string name="CookiesPolicy">Cookies Policy</string>
+    <string name="CookiesPolicy1">ThermSkan ("us", "we", or "our") uses cookies on the https://www.ThermSkan.com website (the "Service"). By using the Service, you consent to the use of cookies.</string>
+    <string name="CookiesPolicy2">Our Cookies Policy explains what cookies are, how we use cookies, how third-parties we may partner with may use cookies on the Service, your choices regarding cookies and further information about cookies. </string>
+    <string name="Whatarecookies">What are cookies</string>
+    <string name="Whatarecookies1">Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you.</string>
+    <string name="Whatarecookies2">Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser.</string>
+    <string name="HowThermSkanusescookies">How ThermSkan uses cookies</string>
+    <string name="HowThermSkanusescookies1">When you use and access the Service, we may place a number of cookies files in your web browser.</string>
+    <string name="HowThermSkanusescookies2">We use cookies for the following purposes:</string>
+    <string name="Whatareyourchoicesregardingcookies">What are your choices regarding cookies</string>
+    <string name="Whatareyourchoicesregardingcookies1">If you\'d like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser. As an European citizen, under GDPR, you have certain individual rights. You can learn more about these rights in the GDPR Guide.</string>
+    <string name="Whatareyourchoicesregardingcookies2">Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly.</string>
+    <string name="Whatareyourchoicesregardingcookies11">For any other web browser, please visit your web browser\'s official web pages.</string>
+    <string name="Wherecanyoufindmoreinformationaboutcookies">Where can you find more information about cookies</string>
+    <string name="Wherecanyoufindmoreinformationaboutcookies1">You can learn more about cookies and the following third-party websites:</string>
+
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="PrivacyPolicy1">ThermSkan ("us", "we", or "our") operates the http://www.ThermSkan.com website (hereinafter referred to as the "Service").</string>
+    <string name="PrivacyPolicy2">This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. </string>
+    <string name="PrivacyPolicy3">We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from http://www.ThermSkan.com </string>
+    <string name="definitions">Definitions</string>
+    <string name="information_collection_and_use">Information Collection and Use</string>
+    <string name="information_collection_and_use1">We collect several different types of information for various purposes to provide and improve our Service to you.</string>
+    <string name="types_of_data_collected">Types of Data Collected</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="personal_data1">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</string>
+    <string name="usage_data">Usage Data</string>
+    <string name="usage_data1">We may also collect information how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer\'s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</string>
+    <string name="tracking_cookies_data">Tracking Cookies Data</string>
+    <string name="tracking_cookies_data1">We use cookies and similar tracking technologies to track the activity on our Service and we hold certain information.</string>
+    <string name="tracking_cookies_data2">Cookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Other tracking technologies are also used such as beacons, tags and scripts to collect and track information and to improve and analyse our Service.</string>
+    <string name="tracking_cookies_data3">You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</string>
+    <string name="tracking_cookies_data4">Examples of Cookies we use:</string>
+    <string name="use_of_data">Use of Data</string>
+    <string name="transfer_of_data">Transfer Of Data</string>
+    <string name="transfer_of_data1">Your information, including Personal Data, may be transferred to - and maintained on - computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
+If you are located outside India and choose to provide information to us, please note that we transfer the data, including Personal Data, to India and process it there.
+</string>
+    <string name="transfer_of_data2">Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</string>
+    <string name="transfer_of_data3">ThermSkan will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.</string>
+    <string name="disclosure_of_data">Disclosure Of Data</string>
+    <string name="legal_requirements">Legal Requirements</string>
+    <string name="legal_requirements1">ThermSkan may disclose your Personal Data in the good faith belief that such action is necessary to:</string>
+    <string name="security_of_data">Security of Data</string>
+    <string name="security_of_data1">The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</string>
+    <string name="service_providers">Service Providers</string>
+    <string name="service_providers1">We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.</string>
+    <string name="service_providers2">These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</string>
+    <string name="links_to_other_sites">Links to Other Sites</string>
+    <string name="links_to_other_sites1">Our Service may contain links to other sites that are not operated by us. If you click a third party link, you will be directed to that third party\'s site. We strongly advise you to review the Privacy Policy of every site you visit.
+We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
+</string>
+    <string name="children_s_privacy">Children\'s Privacy</string>
+    <string name="children_s_privacy1">Our Service does not address anyone under the age of 18 ("Children").</string>
+    <string name="children_s_privacy2">We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</string>
+    <string name="changes_to_this_privacy_policy">Changes to This Privacy Policy</string>
+    <string name="changes_to_this_privacy_policy1">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</string>
+    <string name="changes_to_this_privacy_policy2">We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</string>
+    <string name="changes_to_this_privacy_policy3">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</string>
+
+</resources>

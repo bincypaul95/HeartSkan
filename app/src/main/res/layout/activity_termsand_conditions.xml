@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:padding="10dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="TERMS AND PRIVACY POLICY"
+            android:background="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="Version: 1.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/terms1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/terms2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/terms3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/purple_700"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/links_to_other_web_sites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/link1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/link2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/link3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/purple_700"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/termination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/termination1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/termination2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/purple_700"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/governinglaw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/governinglaw1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/governinglaw2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Changes"
+                android:textColor="@color/purple_700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Changes1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Changes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/ContactUs"
+                android:textColor="@color/purple_700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/ContactUs1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/CookiesPolicy"
+                android:textColor="@color/purple_700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/CookiesPolicy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/CookiesPolicy2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatarecookies"
+                android:textColor="@color/purple_700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatarecookies1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatarecookies2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/purple_700"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/HowThermSkanusescookies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/HowThermSkanusescookies1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/HowThermSkanusescookies2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•         To enable certain functions of the Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•         We use both session and persistent cookies on the Service and we use different types of cookies to run the Service: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•        Essential cookies. We may use essential cookies to authenticate users and prevent fraudulent use of user accounts."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatareyourchoicesregardingcookies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatareyourchoicesregardingcookies1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatareyourchoicesregardingcookies2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•         For the Chrome web browser, please visit this page from Google:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="               https://support.google.com/accounts/answer/32050"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•        For the Internet Explorer web browser, please visit this page from Microsoft: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="              http://support.microsoft.com/kb/278835"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•       For the Firefox web browser, please visit this page from Mozilla:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="             https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•       For the Safari web browser, please visit this page from Apple: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="             https://support.apple.com/kb/PH21411?locale=en_US"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Whatareyourchoicesregardingcookies11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Wherecanyoufindmoreinformationaboutcookies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/Wherecanyoufindmoreinformationaboutcookies1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         AllAboutCookies: http://www.allaboutcookies.org/"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Network Advertising Initiative: http://www.networkadvertising.org/"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/PrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/PrivacyPolicy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/PrivacyPolicy2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/PrivacyPolicy3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/definitions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Service"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Service is the http://www.ThermSkan.com website operated by ThermSkan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Personal Data"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Personal Data means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession)."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Usage Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Usage Data is data collected automatically either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit)."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textStyle="bold"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Cookies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="         Cookies are small files stored on your device (computer or mobile device)."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/information_collection_and_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/information_collection_and_use1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/types_of_data_collected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="italic|bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/personal_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/personal_data1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="• Email address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="• First name and last name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	Phone number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="• Cookies and Usage Data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="italic|bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/usage_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/usage_data1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="italic|bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/tracking_cookies_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/tracking_cookies_data1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/tracking_cookies_data2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/tracking_cookies_data3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/tracking_cookies_data4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	Session Cookies. We use Session Cookies to operate our Service."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	Preference Cookies. We use Preference Cookies to remember your preferences and various settings."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	Security Cookies. We use Security Cookies for security purposes."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/use_of_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="ThermSkan uses the collected data for various purposes:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To provide and maintain the Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To notify you about changes to our Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To allow you to participate in interactive features of our Service when you choose to do so"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To provide customer care and support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To provide analysis or valuable information so that we can improve the Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To monitor the usage of the Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To detect, prevent and address technical issues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/transfer_of_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/transfer_of_data1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/transfer_of_data2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/transfer_of_data3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/disclosure_of_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/legal_requirements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/legal_requirements1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To comply with a legal obligation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To protect and defend the rights or property of ThermSkan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To prevent or investigate possible wrongdoing in connection with the Service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To protect the personal safety of users of the Service or the public"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="•	To protect against legal liability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="As an European citizen, under GDPR, you have certain individual rights. You can learn more about these guides in the GDPR Guide."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/security_of_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/security_of_data1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/service_providers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/service_providers1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/service_providers2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/links_to_other_sites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/service_providers2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/children_s_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/children_s_privacy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/children_s_privacy2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/changes_to_this_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/changes_to_this_privacy_policy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/changes_to_this_privacy_policy2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/changes_to_this_privacy_policy3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/ContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:text="@string/ContactUs1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="meal_array">
+        <item>BreakFast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+    </string-array>
+
+    <string-array name="test_array">
+        <item>Add Manually</item>
+        <item>From Device</item>
+    </string-array>
+
+    <string-array name="Excersice_Array">
+        <item>Aerobics</item>
+        <item>Cardio</item>
+        <item>Dance</item>
+        <item>Fitness workout</item>
+        <item>Jogging</item>
+        <item>Swimming</item>
+        <item>Walking</item>
+        <item>Yoga</item>
+        <item>Zumba</item>
+    </string-array>
+</resources>

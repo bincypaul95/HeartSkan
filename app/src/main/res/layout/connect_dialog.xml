@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.DialogHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:elevation="5dp"
+        android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/searching_devices_make_sure_the_device_is_on"
+                    android:id="@+id/textmsg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avi"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textmsg"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    style="@style/AVLoadingIndicatorView"
+                    android:visibility="visible"
+                    app:indicatorName="BallSpinFadeLoaderIndicator"
+                    app:indicatorColor="@color/purple_500" />
+
+
+                    <TextView
+                        app:layout_constraintTop_toBottomOf="@+id/avi"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:id="@+id/cancel"
+                        android:layout_margin="10dp"
+                        android:onClick="@{handler::onSearchCancelClicked}"
+                        android:textColor="@color/purple_200"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:text="@string/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnok"
+                        android:text="@string/Ok"
+                        android:visibility="gone"
+                        android:layout_margin="10dp"
+                        android:onClick="@{handler::onOkClicked}"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/avi"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

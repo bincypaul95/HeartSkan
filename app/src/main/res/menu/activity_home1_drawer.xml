@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Profile">
+        <menu>
+            <group android:id="@+id/nav_profile"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_patientdetails"
+                    android:icon="@drawable/resume"
+                    android:title="Patient Info"/>
+                <item
+                    android:id="@+id/nav_addnew"
+                    android:icon="@drawable/user"
+                    android:title="Add New Patient"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:id="@+id/nav_communicate"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_order"
+                    android:icon="@drawable/ic_baseline_shopping_cart_24"
+                    android:title="@string/menu_order" />
+
+                <item
+                    android:id="@+id/nav_support"
+                    android:icon="@drawable/support"
+                    android:title="@string/menu_support" />
+
+            </group>
+        </menu>
+    </item>
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/help"
+                android:title="@string/menu_help" />
+
+            <item
+                android:id="@+id/nav_termsandpolicy"
+                android:icon="@drawable/ic_baseline_assignment_24"
+                android:title="@string/terms_and_privacy_policy" />
+
+            <item android:id="@+id/logout"
+                android:icon="@drawable/logout"
+                android:title="Log Out"/>
+
+
+</menu>
+
+
+
+

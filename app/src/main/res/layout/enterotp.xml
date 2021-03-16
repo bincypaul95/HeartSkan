@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.SignupHandler" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:id="@+id/con1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                android:id="@+id/tvhead"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                android:text="@string/otp_verification"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvcontent"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="Enter the OTP you received to"
+                app:layout_constraintTop_toBottomOf="@+id/tvhead"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvemail"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="bincypaul1997@gmail.com"
+                app:layout_constraintTop_toBottomOf="@+id/tvcontent"/>
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:id="@+id/linotp"
+                app:layout_constraintTop_toBottomOf="@+id/tvemail"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/et1"
+                    android:background="@drawable/selector_otp_text"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20sp"
+                    android:cursorVisible="false"
+                    android:textAlignment="center"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/et2"
+                    android:background="@drawable/selector_otp_text"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20sp"
+                    android:cursorVisible="false"
+                    android:textAlignment="center"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/et3"
+                    android:background="@drawable/selector_otp_text"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20sp"
+                    android:cursorVisible="false"
+                    android:textAlignment="center"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:id="@+id/et4"
+                    android:background="@drawable/selector_otp_text"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20sp"
+                    android:cursorVisible="false"
+                    android:textAlignment="center"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:id="@+id/et5"
+                    android:background="@drawable/selector_otp_text"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20sp"
+                    android:cursorVisible="false"
+                    android:textAlignment="center"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:id="@+id/et6"
+                    android:background="@drawable/selector_otp_text"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="20sp"
+                    android:cursorVisible="false"
+                    android:textAlignment="center"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnverify"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linotp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:onClick="@{handler::onVerifyotpClicked}"
+                android:layout_gravity="center"
+                android:text="VERIFY" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:id="@+id/con2"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                android:id="@+id/tvverified"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                android:text="Email Verified"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/ic_baseline_check_circle_24"
+                app:layout_constraintTop_toBottomOf="@+id/tvverified"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</layout>

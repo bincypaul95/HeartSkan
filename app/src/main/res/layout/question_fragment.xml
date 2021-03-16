@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/rootQuestion"
+    android:layout_height="wrap_content">
+        
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textStyle="bold"
+                            android:padding="20dp"
+                            android:gravity="center"
+                            android:id="@+id/tvQuestion"
+                            android:text="Hello"
+                            android:layout_height="wrap_content" />
+                        <include
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_margin="10dp"
+                            layout="@layout/question_type_yes_or_no"
+                            android:id="@+id/layoutQuestionTypeYesOrNo"
+                            android:visibility="gone"
+                            />
+
+                        <include
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_margin="10dp"
+                            layout="@layout/question_blanks"
+                            android:id="@+id/layoutQuestionTypeBlanks"
+                            android:visibility="gone"
+
+                            />
+
+                        <include
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_margin="10dp"
+                            layout="@layout/twovalues"
+                            android:id="@+id/layoutQuestionTypetwoBlanks"
+                            android:visibility="gone"
+                            />
+
+
+                </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>
+
+
+</RelativeLayout>

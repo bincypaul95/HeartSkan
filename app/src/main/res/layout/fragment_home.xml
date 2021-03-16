@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.HandlerHome" />
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewmodel"
+            type="com.evitalz.homevitalz.cardfit.ui.fragments.home.HomeViewModel" />
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/appbar"
+                android:id="@+id/lindate"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:padding="15dp"
+                    android:id="@+id/previous"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/left_arrow"
+                    android:visibility="visible"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{handler::onPrevClicked}"/>
+
+                <TextView
+                    android:id="@+id/tvgraphdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
+                    android:text="@{viewmodel.strDate}"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textStyle="bold"
+                    android:onClick="@{handler::onDateClicked}"
+                    android:gravity="center_horizontal" />
+                <ImageButton
+
+                    android:id="@+id/next"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:padding="15dp"
+                    android:visibility="@{viewmodel.isNextDayAvailable(viewmodel.strDate) ? View.VISIBLE : View.INVISIBLE}"
+                    android:src="@drawable/left_arrow"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:rotation="180"
+                    android:onClick="@{handler::onNextClicked}"
+                    android:layout_height="wrap_content"  />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/bg_nodata"
+                android:alpha="0.7"
+                android:id="@+id/ivnodataavailable"
+                fab:layout_constraintTop_toBottomOf="@id/lindate"
+                fab:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="match_parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    fab:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    fab:layout_constraintTop_toBottomOf="@id/lindate"
+                    android:id="@+id/rvhomelist" >
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.github.clans.fab.FloatingActionMenu
+                        android:id="@+id/menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        fab:menu_fab_size="normal"
+                        android:layout_margin="16dp"
+                        fab:menu_colorNormal="#03DAC5"
+                        fab:menu_colorPressed="#03DAC5"
+                        fab:menu_colorRipple="#99FFFFFF"
+                        fab:menu_showShadow="true"
+                        fab:menu_shadowColor="#ffff"
+                        fab:menu_shadowRadius="1dp"
+                        fab:menu_shadowXOffset="1dp"
+                        fab:menu_shadowYOffset="0dp"
+                        fab:menu_animationDelayPerItem="50"
+                        fab:menu_icon="@drawable/add"
+                        fab:menu_buttonSpacing="0dp"
+                        fab:menu_labels_margin="0dp"
+                        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+                        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+                        fab:menu_fab_show_animation="@anim/show_from_bottom"
+                        fab:menu_fab_hide_animation="@anim/hide_to_bottom">
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabbg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/blood1"
+                            fab:fab_colorNormal="#da4336"
+                            fab:fab_size="mini"
+                            android:onClick="@{handler::onBGClicked}"
+                            fab:fab_label="Blood Sugar"
+                            />
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabecg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/heart"
+                            fab:fab_size="mini"
+                            fab:fab_colorNormal="#1968c1"
+                            fab:fab_label="HeartRate"
+                            android:onClick="@{handler::onECGClicked}"
+                            />
+
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabSpo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/heart"
+                            fab:fab_colorNormal="#1968c1"
+                            fab:fab_size="mini"
+                            fab:fab_label="SpO2"
+                            android:visibility="gone"
+                            android:onClick="@{handler::onSpo2Clicked}" />
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/meal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fab:fab_colorNormal="#43a047"
+                            android:src="@drawable/food"
+                            fab:fab_size="mini"
+                            fab:fab_label="Food"
+                            android:onClick="@{handler::onMealClicked}"/>
+
+                        <com.github.clans.fab.FloatingActionButton
+                            android:id="@+id/Exercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/excersice"
+                            fab:fab_size="mini"
+                            fab:fab_colorNormal="#989723"
+                            fab:fab_label="Exercise"
+                            android:onClick="@{handler::onExcersiceClicked}"/>
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabpill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pill"
+                            fab:fab_colorNormal="#ffb805"
+                            fab:fab_size="mini"
+                            fab:fab_label="Medication"
+                            android:onClick="@{handler::onPillTakenClicked}"/>
+
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabsleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sleep"
+                            fab:fab_colorNormal="#000"
+                            fab:fab_size="mini"
+                            fab:fab_label="Sleep"
+                            android:onClick="@{handler::onSleepClicked}"/>
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabreminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/addreminder"
+                            fab:fab_colorNormal="#AA51DA"
+                            fab:fab_size="mini"
+                            android:visibility="gone"
+                            fab:fab_label="Pill Reminder" />
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabliquor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/addliquor"
+                            fab:fab_colorNormal="#FF00695C"
+                            fab:fab_size="mini"
+                            android:onClick="@{handler::onLiquorClicked}"
+                            fab:fab_label="Liquor"
+                            android:visibility="visible" />
+
+                    </com.github.clans.fab.FloatingActionMenu>
+
+
+                </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

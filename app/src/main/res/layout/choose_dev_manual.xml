@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.HandlerMeasure" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/purple_700" />
+
+        <TextView
+            android:drawableLeft="@drawable/pencil"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/choose_manual"
+            android:onClick="@{handler::onManualClicked}"
+            android:background="?attr/selectableItemBackground"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:text="@string/AddManually" />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/purple_700" />
+
+        <TextView
+            android:drawableLeft="@drawable/bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/choose_device"
+            android:onClick="@{handler::onWirelessClicked}"
+            android:background="?attr/selectableItemBackground"
+            android:drawablePadding="10dp"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:text="From Device" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/purple_700" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="devicemodel"
+            type="com.evitalz.homevitalz.cardfit.ui.model.MyDeviceModel" />
+        <import type="android.view.View"/>
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.HandlerDeviceConnect" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="@{devicemodel == null ? View.GONE : View.VISIBLE }"
+        app:layout_constraintTop_toBottomOf="@+id/tvhead"
+        android:id="@+id/lindeviceid">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pm10" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textStyle="bold"
+                android:text="@{devicemodel.devicename}"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:id="@+id/tvdevname" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvdevname"
+                android:padding="10dp"
+                android:text="@{String.valueOf(devicemodel.devicemac)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:id="@+id/tvmacname" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/connect"
+            android:onClick="@{handler::onConnectClicked}"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5" />
+
+
+    </LinearLayout>
+</layout>

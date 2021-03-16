@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/fragment_profile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lincard1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cardview2"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview3"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/diabetic"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Type1"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/diabetic"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/cardview1"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview4"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blood_pressure__1_"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="120/80"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/BloodPressure"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lincard2"
+                app:layout_constraintTop_toBottomOf="@+id/lincard1">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cardview2"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview3"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blood_pressure__1_"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="5'7 ft"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/height"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/cardview1"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview4"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blood_pressure__1_"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="60 kg"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/Weight"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lincard3"
+                app:layout_constraintTop_toBottomOf="@+id/lincard2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cardview2"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview3"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/diabetic"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="6%"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/hba1c"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/cardview1"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview4"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blood_pressure__1_"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="34/36"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="Waist / Hip"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/lincard3">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/cardview2"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview3"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blood_pressure__1_"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="36 in"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="@string/waist"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:id="@+id/tvdob"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/cardview8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/cardview1"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview4"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_margin="10dp"
+                            android:src="@drawable/blood_pressure__1_"
+                            android:layout_weight="0.15"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="34/32"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="Waist/Hip"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:textAppearance="@android:style/TextAppearance.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
