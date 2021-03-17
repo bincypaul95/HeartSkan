@@ -19,6 +19,10 @@ import com.contec.jar.pm10.PrintBytes;
 
 
 
+import static com.evitalz.homevitalz.cardfit.pm10_sdk.BluetoothChatService.ACTION_DATA_NOT_AVAILABLE;
+import static com.evitalz.homevitalz.cardfit.pm10_sdk.BluetoothChatService.ACTION_FETCHING_DATA;
+
+
 public class  MtBuf {
 	private static final String TAG = "lz";
 	public static Vector<Integer> m_buf = null;

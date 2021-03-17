@@ -63,6 +63,7 @@
                 app:cardCornerRadius="5dp"
                 android:layout_margin="30dp"
                 android:padding="20dp"
+                android:theme="@style/Theme.MaterialComponents.Light"
                 android:id="@+id/cardview"
                 app:layout_constraintTop_toBottomOf="@+id/tvsignin">
 
@@ -141,6 +142,7 @@
                 android:layout_margin="50dp"
                 android:padding="10dp"
                 android:id="@+id/btnlogin"
+                android:theme="@style/Theme.MaterialComponents.Light"
                 android:onClick="@{handler::onLoginClicked}"
                 app:layout_constraintTop_toBottomOf="@+id/cardview"
                 app:layout_constraintLeft_toLeftOf="parent"

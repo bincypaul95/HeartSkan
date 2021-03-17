@@ -19,14 +19,99 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CarDfit">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.Spo2PulseRate">
+        <activity android:name=".ui.activities.login.RecoverPasswordActivity">
+
+        </activity>
+
+        <activity android:name=".RfTestActivity" />
+        <activity
+            android:name=".ui.activities.userinfo.AddNewPatientActivity"
+            android:label="Add Patient"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity android:name=".ui.activities.menuactivity.TermsandConditionsActivity" />
+        <activity android:name=".ui.activities.menuactivity.AboutusActivity" />
+        <activity
+            android:name=".EditUserInfo"
+            android:label="Edit Patient Details"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+
+
+        <activity
+            android:name=".ui.activities.connect_device.ViewPdfActivity"
+            android:label="View PDF"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity android:name=".ui.activities.manualentry.StartAlarmActivity" />
+        <activity
+            android:name=".ui.activities.connect_device.ECGgraphActivity"
+            android:label="ECG Graph"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity android:name=".ui.activities.connect_device.GraphActivity" />
+        <activity android:name=".ui.activities.login.SignupActivity" />
+        <activity android:name=".ui.activities.login.LoginActivity" />
+        <activity
+            android:name=".ui.activities.meal.LiquorActivity"
+            android:label="Add Liquor"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity
+            android:name=".ui.activities.userinfo.UserInfoActivity"
+            android:label="Patient Details"
+            android:theme="@style/Theme.Spo2PulseRate" />
+        <activity android:name=".ui.activities.chat.ChatActivity" />
+        <activity
+            android:name=".ui.activities.manualentry.DiabetesActivity"
+            android:label="Add Blood Glucose"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity android:name=".ui.activities.connect_device.DataReceiverActivity" />
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@style/Theme.SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.activities.connect_device.SearchDeviceActivity"
+            android:theme="@style/Theme.Spo2PulseRate" />
+        <activity
+            android:name=".ui.activities.manualentry.Spo2Activity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".ui.activities.connect_device.ConnectDeviceActivity"
+            android:theme="@style/Theme.Spo2PulseRate" />
+        <activity
+            android:name=".ui.activities.exercise.ExerciseActivity"
+            android:label="Add Exercise"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity
+            android:name=".ui.activities.sleep.SleepActivity"
+            android:label="Add Sleep"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity
+            android:name=".ui.activities.pilltake.PillActivity"
+            android:label="Add Medication"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity
+            android:name=".ui.activities.meal.MealActivity"
+            android:label="Add Food"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
+        <activity
+            android:name=".ui.activities.home.HomeActivity"
+            android:label="@string/title_activity_home" />
+        <activity android:name=".MainActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
     </application>
 
 </manifest>
