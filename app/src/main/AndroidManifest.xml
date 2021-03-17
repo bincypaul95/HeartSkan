@@ -78,7 +78,8 @@
             android:theme="@style/Theme.Spo2PulseRate" />
         <activity
             android:name=".ui.activities.manualentry.Spo2Activity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+            android:label="Add SPO2"
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
         <activity
             android:name=".ui.activities.connect_device.ConnectDeviceActivity"
             android:theme="@style/Theme.Spo2PulseRate" />

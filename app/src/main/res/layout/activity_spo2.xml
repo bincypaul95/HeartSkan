@@ -14,8 +14,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffff">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,6 +24,7 @@
                 android:layout_width="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/appbar"
+                android:visibility="gone"
                 android:background="#fff"
                 android:layout_height="wrap_content">
 
@@ -39,20 +39,20 @@
                         android:src="@drawable/cancel"
                         android:id="@+id/btncancel"
                         android:gravity="start"
-                        android:onClick="@{handler::oncancelclicked}" />
+                        />
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/btnsave"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/purple_700"
                         android:text="@{viewmodel.btnsave}"
                         android:textStyle="bold"
                         android:fontFamily="@font/robotoregular"
                         android:gravity="right"
-                        android:onClick="@{handler::onSaveClicked}" />
+                        />
 
                 </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.AppBarLayout>
@@ -61,164 +61,251 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/appbar"
-                android:text="@string/add_spo2"
+                android:text="@string/add_blood_glucose_level"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textStyle="bold"
+                android:visibility="gone"
                 android:fontFamily="@font/robotoregular"
                 android:layout_margin="30dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:id="@+id/tvheading" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tvheading"
-                android:id="@+id/linspo2"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bgmmoltextfield"
                 android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvheading"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
-                    android:id="@+id/etspo2"
-                    android:maxLines="1"
-                    android:hint="SpO2"
-                    android:text="@{viewmodel.spo2}"
-                    android:singleLine="true"
-                    android:inputType="number"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/tvunit1"
-                    android:layout_margin="10dp"
-                    android:textAppearance="@android:style/TextAppearance.Large"
-                    android:text="%"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:maxLines="1"
+                    android:id="@+id/etbglevelinmmol"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
                     android:singleLine="true"
                     android:inputType="numberDecimal"
-                    android:fontFamily="@font/robotoregular"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="67"
+                    android:hint="Spo2 (%)" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/linspo2"
-                android:id="@+id/linpulse"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bgmgdltextfield"
                 android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/bgmmoltextfield"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
-                    android:id="@+id/etpulse"
-                    android:maxLines="1"
+                    android:id="@+id/etbglevelinmgdl"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
                     android:singleLine="true"
-                    android:text="@{viewmodel.pulse}"
-                    android:hint="Pulse"
-                    android:inputType="number"
-                    android:layout_height="wrap_content" />
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content"
+                    android:text="67"
+                    android:hint="Pulse in bpm" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/selcttypetextfield"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/bgmgdltextfield"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:hint="Measured"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerUnitlist"
+                    android:text="78"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvselect"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/bgmgdltextfield"
+                android:text="@string/SelectTestType"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvselect"
+                android:id="@+id/conselecttype">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:padding="3dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/image2"
+                    android:background="@color/gray"
+                    android:src="@drawable/fasting"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
 
                 <TextView
-                    android:layout_margin="10dp"
-                    android:textAppearance="@android:style/TextAppearance.Large"
-                    android:text="@string/bpm"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:fontFamily="@font/robotoregular"
+                    android:id="@+id/txt1"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:text="@string/fasting"
+                    app:layout_constraintTop_toBottomOf="@+id/image1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/txt2"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
                     android:layout_height="wrap_content" />
 
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/image2"
+                    android:padding="3dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/image1"
+                    app:layout_constraintRight_toLeftOf="@+id/image3"
+                    android:background="@color/gray"
+                    android:src="@drawable/postparental"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:text="@string/postprandial"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/image1"
+                    app:layout_constraintRight_toLeftOf="@+id/txt3"
+                    app:layout_constraintLeft_toRightOf="@+id/txt1"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:padding="3dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/image2"
+                    android:background="@color/gray"
+                    android:src="@drawable/random"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:text="@string/random"
+                    app:layout_constraintTop_toBottomOf="@+id/image2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/txt2"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_height="wrap_content" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/notetextfield"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/selcttypetextfield"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etnotes"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:hint="Add Note" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/linpulse"
+                app:layout_constraintTop_toBottomOf="@+id/notetextfield"
                 android:orientation="horizontal"
                 android:layout_margin="10dp"
                 android:id="@+id/lindatetime">
 
-                <RelativeLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textfield1"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textfield"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ettempf">
+                    android:layout_height="wrap_content">
 
-                    <TextView
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tvdate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/rectangle"
-                        android:padding="10dp"
-                        android:textColor="#000"
-                        android:textStyle="bold"
                         android:text="@{viewmodel.strDate}"
                         android:onClick="@{handler::onDateClicked}"
-                        android:fontFamily="@font/robotoregular" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#ffff"
-                        android:text="@string/date"
-                        android:textColor="#000"
-                        android:textSize="12dp" />
-                </RelativeLayout>
+                        android:hint="Date" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <RelativeLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textfield2"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textfield"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ettempf">
+                    android:layout_height="wrap_content">
 
-                    <TextView
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tvtime"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/rectangle"
-                        android:padding="10dp"
-                        android:textColor="#000"
                         android:text="@{viewmodel.strtime}"
                         android:onClick="@{handler::onTimeClicked}"
-                        android:fontFamily="@font/robotoregular"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/time"
-                        android:textColor="#000"
-                        android:background="#ffff"
-                        android:textSize="12dp" />
-                </RelativeLayout>
+                        android:hint="Time" />
+                </com.google.android.material.textfield.TextInputLayout>
+
 
             </LinearLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

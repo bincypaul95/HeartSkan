@@ -289,7 +289,7 @@ class HomeFragment : Fragment(), HandlerHome, HandlerShowTimeline, HandlerMeasur
         private val TYPE_PILL = 3
         private val TYPE_SLEEP = 4
         private val TYPE_HEARTRATE = 5
-        private val TYPE_GLUCOSE = 6
+        private val TYPE_SPO2 = 6
         private val TYPE_LIQUOR = 7
 
         private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -314,8 +314,8 @@ class HomeFragment : Fragment(), HandlerHome, HandlerShowTimeline, HandlerMeasur
         inner  class ShowReadingviewholder(val bindngreading: RowShowreadingsBinding) : RecyclerView.ViewHolder(
             bindngreading.root
         )
-        inner  class ShowBgReadingviewholder(val bindngbgreading: RowShowglucoseBinding) : RecyclerView.ViewHolder(
-            bindngbgreading.root
+        inner  class ShowSpo2Readingviewholder(val bindngspreading: RowSpo2Binding) : RecyclerView.ViewHolder(
+                bindngspreading.root
         )
         inner  class ShowLiquorviewholder(val bindngliquor: RowLiquorBinding) : RecyclerView.ViewHolder(
             bindngliquor.root
@@ -369,14 +369,14 @@ class HomeFragment : Fragment(), HandlerHome, HandlerShowTimeline, HandlerMeasur
                     )
                     return ShowReadingviewholder(bindingreading)
                 }
-                TYPE_GLUCOSE -> {
-                    val bindingbgreading: RowShowglucoseBinding = DataBindingUtil.inflate(
+                TYPE_SPO2 -> {
+                    val bindingspo2reading: RowSpo2Binding = DataBindingUtil.inflate(
                         inflater,
-                        R.layout.row_showglucose,
+                        R.layout.row_spo2,
                         parent,
                         false
                     )
-                    return ShowBgReadingviewholder(bindingbgreading)
+                    return ShowSpo2Readingviewholder(bindingspo2reading)
                 }
                 TYPE_LIQUOR -> {
                     val bindingliquor: RowLiquorBinding = DataBindingUtil.inflate(
@@ -411,7 +411,7 @@ class HomeFragment : Fragment(), HandlerHome, HandlerShowTimeline, HandlerMeasur
                 "PillTaken" -> return TYPE_PILL
                 "Sleep" -> return TYPE_SLEEP
                 "ECG" -> return TYPE_HEARTRATE
-                "BloodGlucose" -> return TYPE_GLUCOSE
+                "SpO2" -> return TYPE_SPO2
                 "Liquor" -> return TYPE_LIQUOR
             }
             return super.getItemViewType(position)
@@ -479,15 +479,15 @@ class HomeFragment : Fragment(), HandlerHome, HandlerShowTimeline, HandlerMeasur
                 holder.bindngreading.setVariable(BR.handlerreading, fragment)
                 holder.bindngreading.executePendingBindings()
             }
-            if (getItemViewType(position) ==TYPE_GLUCOSE) {
-                (holder as ShowBgReadingviewholder)
-                holder.bindngbgreading.linshowtimeline.setOnLongClickListener {
+            if (getItemViewType(position) ==TYPE_SPO2) {
+                (holder as ShowSpo2Readingviewholder)
+                holder.bindngspreading.linshowtimeline.setOnLongClickListener {
                     onDeleteClicked(deviceReadings = devicereadings[position])
                     true
                 }
-                holder.bindngbgreading.devicereadings=devicereadings[position]
-                holder.bindngbgreading.setVariable(BR.handlerreading, fragment)
-                holder.bindngbgreading.executePendingBindings()
+                holder.bindngspreading.devicereadings=devicereadings[position]
+                holder.bindngspreading.setVariable(BR.handlerreading, fragment)
+                holder.bindngspreading.executePendingBindings()
             }
         }
 

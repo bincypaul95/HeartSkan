@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">cardFit</string>
+    <string name="app_name">Fab  Fit</string>
     <string name="title_activity_home">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Analytics</string>
@@ -313,5 +313,6 @@ We have no control over and assume no responsibility for the content, privacy po
     <string name="changes_to_this_privacy_policy1">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</string>
     <string name="changes_to_this_privacy_policy2">We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</string>
     <string name="changes_to_this_privacy_policy3">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</string>
+    <string name="oxygen_saturation">Oxygen Saturation</string>
 
 </resources>

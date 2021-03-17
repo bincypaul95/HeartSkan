@@ -133,8 +133,21 @@
                             android:src="@drawable/blood1"
                             fab:fab_colorNormal="#da4336"
                             fab:fab_size="mini"
+                            android:visibility="gone"
                             android:onClick="@{handler::onBGClicked}"
                             fab:fab_label="Blood Sugar"
+                            />
+
+                        <com.github.clans.fab.FloatingActionButton
+
+                            android:id="@+id/fabspo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pulse1"
+                            fab:fab_colorNormal="#da4336"
+                            fab:fab_size="mini"
+                            android:onClick="@{handler::onSpo2Clicked}"
+                            fab:fab_label="@string/SpO2"
                             />
 
                         <com.github.clans.fab.FloatingActionButton
