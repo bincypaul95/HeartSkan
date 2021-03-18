@@ -92,7 +92,7 @@ class BloodGlucoseFragment : Fragment(){
                     entries.add(
                         Entry(
                             ((item.datetime - referenceval)/100).toFloat(),
-                            item.dread5.toFloat()
+                            item.dread1.toFloat()
                         )
                     )
                     colors.add(get_color("Blood Glucose", item.dread2, item.dread5.toFloat()))

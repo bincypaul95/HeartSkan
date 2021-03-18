@@ -39,14 +39,15 @@ class DeviceAdapter internal constructor(private val context:Activity):
         holder.binding.handler= context as PairHandler
 
         when(devicelist[position].devicename) {
-            "Glucose" -> {
-                holder.binding.ivecg.setImageResource(R.drawable.glukocheck1)
-            }
-            "FORA 6 CONNECT" -> {
-            holder.binding.ivecg.setImageResource(R.drawable.fora_6_connect)
+            "TNG SPO2" -> {
+                holder.binding.ivecg.setImageResource(R.drawable.tng_spo2)
             }
             else -> {
-                holder.binding.ivecg.setImageResource(R.drawable.pm10)
+                val name=devicelist[position].devicename
+                if(name.length>3 && name.substring(0,4) == "PM10"){
+                    holder.binding.ivecg.setImageResource(R.drawable.pm10)
+                }
+
             }
         }
         if (Utility.getSavedBluetoothAddress(context) == devicelist[position].devicemac.toString()){

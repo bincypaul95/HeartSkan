@@ -40,7 +40,7 @@ class AnalyticsViewModel(application: Application) : AndroidViewModel(applicatio
 
         selecteditem.set(0)
         testResult = Transformations.switchMap(dates){ time ->
-                repository.devicereadingBG(time.startTime, time.endTime, Utility.getpregid(getApplication()))
+                repository.devicereadingSpo2(time.startTime, time.endTime, Utility.getpregid(getApplication()))
         }
         ecgResult = Transformations.switchMap(dates){ time ->
             repository.devicereadingheartrate(time.startTime, time.endTime, Utility.getpregid(getApplication()))

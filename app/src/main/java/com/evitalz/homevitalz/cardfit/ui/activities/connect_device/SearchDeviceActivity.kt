@@ -110,14 +110,15 @@ class SearchDeviceActivity : AppCompatActivity(), PairHandler {
                     if (device.name != null && (device.name.length > 3) && device.name.substring(
                             0,
                             4
-                        ).equals("PM10") && !viewmodel.isduplicate(device)
+                        ) == "PM10" || device.name == "TNG SPO2" && !viewmodel.isduplicate(device)
                     ) {
                         val deviceName = device.name.trim { it <= ' ' }
+                        Log.d("search_test", "onReceive: yes")
 //                    dialog.dismiss()
                         viewmodel.addavailableDevice(MyDeviceModel(deviceName, device))
-
                     }
                 }
+
             } else if (BluetoothDevice.ACTION_BOND_STATE_CHANGED == intent.action) {
                 val bondState = intent.getIntExtra(EXTRA_BOND_STATE, ERROR)
                 Log.d("search_test", "bond changed $bondState")
@@ -145,13 +146,13 @@ class SearchDeviceActivity : AppCompatActivity(), PairHandler {
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION
         )
-        const val LOCATION_PERMISSION_REQUEST = 101
+        private const val LOCATION_PERMISSION_REQUEST = 101
 
         fun hasPermissions(
             context: Context?,
             vararg permissions: String?
         ): Boolean {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null) {
                 for (permission in permissions) {
                     if (ActivityCompat.checkSelfPermission(
                             context,

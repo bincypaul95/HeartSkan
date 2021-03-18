@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.evitalz.homevitalz.cardfit.ui.activities.home.HomeActivity
 import com.evitalz.homevitalz.cardfit.ui.activities.login.LoginActivity
+import com.evitalz.homevitalz.cardfit.ui.activities.spo2.ConnectSpo2Activity
 
-  class SplashActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
     val sharedPreferences : SharedPreferences by lazy {
         getSharedPreferences(PREF , Context.MODE_PRIVATE)

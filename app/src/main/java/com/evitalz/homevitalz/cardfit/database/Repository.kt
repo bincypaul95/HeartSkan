@@ -19,6 +19,10 @@ class DeviceReadingsRepository(private val deviceReadingdao: DeviceReadingdao){
         return deviceReadingdao.getDeviceReadingBG(ms , endMs,pregid)
     }
 
+    fun devicereadingSpo2( ms : Long , endMs : Long,pregid:Int) : LiveData<List<Device_Readings>>{
+        return deviceReadingdao.getDeviceReadingspo2(ms , endMs,pregid)
+    }
+
     fun devicereadingheartratebyid( rowid : Long) : Device_Readings {
         return deviceReadingdao.getDeviceReadingHeartratebyid(rowid)
     }

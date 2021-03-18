@@ -21,6 +21,7 @@ interface HandlerHome {
     fun onLiquorClicked(view: View)
 }
 
+
 interface HandlerSpo2{
     fun onSaveClicked(view: View)
     fun oncancelclicked(view: View)

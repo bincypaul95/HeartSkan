@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="handler"
+            type="com.evitalz.homevitalz.cardfit.HandlerDeviceConnect" />
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="address"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnaddnewdevice"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.activities.connect_device.ConnectDeviceActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/selected_device"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:id="@+id/tvhead" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@id/lindevice"
+                    app:layout_constraintTop_toBottomOf="@+id/tvhead"
+                    android:layout_margin="10dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/tvnodevice"
+                        android:text="@string/no_devices_has_paired_yet"
+                        android:visibility="@{name == null ? View.VISIBLE : View.GONE }"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_margin="10dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="@{name == null ? View.GONE : View.VISIBLE }"
+                        app:layout_constraintTop_toBottomOf="@+id/tvhead"
+                        android:id="@+id/lindeviceid">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/ivecg"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:src="@drawable/pm10" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ivecg"
+                            android:textStyle="bold"
+                            android:text="@{name}"
+                            android:layout_margin="5dp"
+                            android:padding="10dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:id="@+id/tvdevname" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toRightOf="@+id/ivecg"
+                            app:layout_constraintTop_toBottomOf="@+id/tvdevname"
+                            android:padding="10dp"
+                            android:text="@{address}"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:id="@+id/tvmacname" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/take_test"
+                            android:id="@+id/btntaketest"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:onClick="@{handler::onConnectClicked}"
+                            android:padding="5dp"
+                            android:layout_margin="10dp"
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/lindevice"
+                    android:id="@+id/svinstructions">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginBottom="16dp"
+                            android:textAppearance="@android:style/TextAppearance.Medium"
+                            android:text="How to Use"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:src="@drawable/ecg1"
+                            android:id="@+id/iv1"/>
+
+                        <TextView
+                            android:layout_marginBottom="16dp"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:text="@string/step1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:src="@drawable/ecg2"
+                            android:id="@+id/iv2"/>
+                        <TextView
+                            android:layout_marginBottom="16dp"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:text="@string/step2"
+                            android:layout_margin="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:src="@drawable/ecg3"
+                            android:id="@+id/iv3"/>
+                        <TextView
+                            android:layout_marginBottom="16dp"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:text="@string/step3"
+                            android:layout_margin="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_device"
+            android:layout_margin="10dp"
+            android:id="@+id/btnaddnewdevice"
+            android:onClick="@{handler::onAddDeviceClicked}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -17,6 +17,8 @@ public class Device_UUID {
     public static final UUID CLIENT_CHARACTERISTIC_CONFIG1 = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
     public static final UUID CHARACTERISTIC_READABLE = UUID.fromString("00001003-0000-1000-8000-00805f9b34fb");
     public static final UUID BP_SERVICE = UUID.fromString("D44BC439-ABFD-45A2-B575-925416129601");
+    public static final UUID METER_UUID_SPO2 = UUID.fromString("00001523-1212-efde-1523-785feabcd123");
+    public static final UUID METER_UUID2_SPO2 = UUID.fromString("00001524-1212-efde-1523-785feabcd123");
 
     public enum User {
         CurrentUser(0),

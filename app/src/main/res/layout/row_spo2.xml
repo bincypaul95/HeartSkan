@@ -68,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text='@{devicereadings.dread5+ " "+"%"}'
+                android:text='@{devicereadings.dread2+ " "+"bpm"}'
                 android:paddingTop="5dp"
                 app:layout_constraintLeft_toLeftOf="@id/tvdread2"
                 app:layout_constraintTop_toBottomOf="@id/tvdread2"
@@ -79,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text='@{devicereadings.dread2}'
                 android:paddingTop="5dp"
+                android:visibility="gone"
                 app:layout_constraintLeft_toLeftOf="@id/tvdread2"
                 app:layout_constraintTop_toBottomOf="@id/tvdread3"
                 android:id="@+id/tvdread4" />
@@ -97,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:text='@{devicereadings.dread1+ " "+"bpm"}'
+                android:text='@{devicereadings.dread1+ " "+"%"}'
                 app:layout_constraintLeft_toLeftOf="@id/tvdread1"
                 app:layout_constraintTop_toBottomOf="@id/tvdread1" />
 

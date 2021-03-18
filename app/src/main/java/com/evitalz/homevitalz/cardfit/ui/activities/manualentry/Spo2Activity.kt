@@ -1,4 +1,4 @@
-package com.evitalz.homevitalz.cardfit.ui.activities.manualentry
+ package com.evitalz.homevitalz.cardfit.ui.activities.manualentry
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -112,7 +112,7 @@ class Spo2Activity : AppCompatActivity(), HandlerSpo2 {
                 val deviceReadings = Device_Readings(0, 1, Utility.getpregid(this),
                         value1,
                         value2,
-                        "", "", Calendar.getInstance().time.time, 0, "SpO2",6, 1, "",
+                        "", "", Calendar.getInstance().time.time, 0, "SpO2",7, 1, "",
                         "", binding.etnotes.text.toString(),
                         viewModel.datetime.time.time
                 )

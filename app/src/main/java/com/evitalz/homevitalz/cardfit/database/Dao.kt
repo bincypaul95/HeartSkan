@@ -23,6 +23,10 @@ interface DeviceReadingdao{
     @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE LIKE 'BLOODGLUCOSE'  ORDER BY Date_time ASC")
     fun getDeviceReadingBG( ms : Long , endMs : Long,pregid :Int) : LiveData<List<Device_Readings>>
 
+    @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE LIKE 'SpO2'  ORDER BY Date_time ASC")
+    fun getDeviceReadingspo2( ms : Long , endMs : Long,pregid :Int) : LiveData<List<Device_Readings>>
+
+
     @Query("select * from Device_Readings where ID= :rowid")
     fun getDeviceReadingHeartratebyid(rowid : Long) : Device_Readings
 

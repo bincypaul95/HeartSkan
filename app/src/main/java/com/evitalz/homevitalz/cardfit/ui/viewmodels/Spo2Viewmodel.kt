@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.evitalz.homevitalz.cardfit.api.ApiManager
 import com.evitalz.homevitalz.cardfit.database.DeviceReadingsRepository
 import com.evitalz.homevitalz.cardfit.database.Device_Readings
 import com.evitalz.homevitalz.cardfit.database.Spo2Database
@@ -20,8 +21,9 @@ class Spo2Viewmodel(application: Application, val dateinlong: Long, val deviceRe
     val pulse : ObservableField<String> = ObservableField()
     val btnsave : ObservableField<String> = ObservableField()
     val datetime : Calendar
-    val strFormatter : SimpleDateFormat
-    val strTimeFormatter : SimpleDateFormat
+    val note : ObservableField<String> = ObservableField()
+    private val strFormatter : SimpleDateFormat
+    private val strTimeFormatter : SimpleDateFormat
     private val deviceReadingsRepository: DeviceReadingsRepository
 
     init {
@@ -35,15 +37,17 @@ class Spo2Viewmodel(application: Application, val dateinlong: Long, val deviceRe
         deviceReadingsRepository = DeviceReadingsRepository(deviceReadingdao)
         btnsave.set("SAVE")
         if(update){
-            pulse.set(deviceReadings!!.dread2)
             spo2.set(deviceReadings!!.dread1)
+            pulse.set(deviceReadings!!.dread2)
+            note.set(deviceReadings!!.note)
             strDate.set(strFormatter.format(deviceReadings.datetime))
             strtime.set(strTimeFormatter.format(deviceReadings.datetime))
             btnsave.set("UPDATE")
         }
     }
     fun insertdevicereadings(deviceReadings: Device_Readings) = viewModelScope.launch(Dispatchers.IO){
-        deviceReadingsRepository.insertdevicereadings(deviceReadings)
+        val rowId = deviceReadingsRepository.insertdevicereadings(deviceReadings)
+        ApiManager.insertdata(rowId , getApplication())
     }
     fun updatedevicereadings(deviceReadings: Device_Readings) = viewModelScope.launch(Dispatchers.IO){
         deviceReadingsRepository.updatedevicereadings(deviceReadings)

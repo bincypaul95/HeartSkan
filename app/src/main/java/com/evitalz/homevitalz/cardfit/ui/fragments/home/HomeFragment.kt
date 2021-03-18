@@ -567,8 +567,8 @@ class HomeFragment : Fragment(), HandlerHome, HandlerShowTimeline, HandlerMeasur
                                 intent.putExtra("update", true)
                                 startActivity(intent)
                             }
-                            "BloodGlucose" -> {
-                                val intent = Intent(requireActivity(), DiabetesActivity::class.java)
+                            "SpO2" -> {
+                                val intent = Intent(requireActivity(), Spo2Activity::class.java)
                                 intent.putExtra("devicereading", deviceReadings)
                                 intent.putExtra("datetime", deviceReadings.datetime)
                                 intent.putExtra("update", true)
