@@ -35,7 +35,9 @@ class DeviceAdapter internal constructor(private val context:Activity):
 
     override fun onBindViewHolder(holder: DeviceListViewHolder, position: Int) {
         Log.d("listsize", "onBindViewHolder: ${devicelist.size}")
-        holder.binding.setVariable(BR.deviceModel,devicelist[position])
+        holder.binding.setVariable(BR.devicemodel,devicelist[position])
+//        holder.binding.setVariable(BR.devicename, devicelist[position].devicename)
+//        holder.binding.setVariable(BR.devicemac, devicelist[position].devicemac.toString())
         holder.binding.handler= context as PairHandler
 
         when(devicelist[position].devicename) {

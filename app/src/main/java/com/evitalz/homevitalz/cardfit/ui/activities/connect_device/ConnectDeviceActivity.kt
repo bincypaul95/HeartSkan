@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.evitalz.homevitalz.cardfit.HandlerDeviceConnect
 import com.evitalz.homevitalz.cardfit.PairHandler
+import com.evitalz.homevitalz.cardfit.R
 import com.evitalz.homevitalz.cardfit.Utility
 import com.evitalz.homevitalz.cardfit.databinding.ActivityConnectDeviceBinding
 import com.evitalz.homevitalz.cardfit.databinding.ConnectDialogBinding
@@ -69,7 +70,13 @@ import com.evitalz.homevitalz.cardfit.ui.viewmodels.ConnectDeviceViewModel
                         it.name = deviceName
                         it.address = device.address
                         it.executePendingBindings()
+                        if(it.name.equals("TNG SPO2")){
+                            binding.ivecg.setImageResource(R.drawable.tng_spo2)
+                        }else{
+                            binding.ivecg.setImageResource(R.drawable.pm10)
+                        }
                     }
+
                     binding.executePendingBindings()
                 }
             }
@@ -111,6 +118,11 @@ import com.evitalz.homevitalz.cardfit.ui.viewmodels.ConnectDeviceViewModel
                 binding.let {
                     it.name = deviceName
                     it.address = deviceMac
+                    if(it.name == "TNG SPO2"){
+                        binding.ivecg.setImageResource(R.drawable.tng_spo2)
+                    }else{
+                        binding.ivecg.setImageResource(R.drawable.pm10)
+                    }
                     it.executePendingBindings()
                 }
             }
@@ -122,8 +134,14 @@ import com.evitalz.homevitalz.cardfit.ui.viewmodels.ConnectDeviceViewModel
     }
 
     override fun onConnectClicked(view: View) {
+        when(binding.tvdevname.text.toString()){
+            "TNG SPO2"->{
 
-        startActivity(Intent(this, DataReceiverActivity::class.java))
+            }else->{
+               startActivity(Intent(this, DataReceiverActivity::class.java))
+            }
+        }
+
 
     }
 

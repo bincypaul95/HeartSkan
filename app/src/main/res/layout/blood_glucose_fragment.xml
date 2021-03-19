@@ -33,7 +33,7 @@
                     android:padding="5dp"
                     android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:text="BLOOD GLUCOSE"
+                    android:text="Oxygen Saturation Level"
                     android:id="@+id/texttype"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent" />

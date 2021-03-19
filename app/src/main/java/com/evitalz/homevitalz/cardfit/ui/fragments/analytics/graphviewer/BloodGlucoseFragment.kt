@@ -95,7 +95,7 @@ class BloodGlucoseFragment : Fragment(){
                             item.dread1.toFloat()
                         )
                     )
-                    colors.add(get_color("Blood Glucose", item.dread2, item.dread5.toFloat()))
+                    colors.add(get_color("SPO2", item.dread2, item.dread1.toFloat()))
         }
 
         val dataSet = LineDataSet(entries, "")

@@ -75,10 +75,11 @@ class SearchDeviceActivity : AppCompatActivity(), PairHandler {
         binding.recyclerview.adapter = adapter
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
 
-//        showMessageDialog()
+        showMessageDialog()
         viewmodel.deviceavailableListLive.observe(this, Observer {
             adapter.devicelist = it
             adapter.notifyDataSetChanged()
+            Log.d("search_testdata", "onCreate:${it} ")
             Log.d("search_test", "onCreate: ${it.size}")
         })
 
@@ -114,7 +115,7 @@ class SearchDeviceActivity : AppCompatActivity(), PairHandler {
                     ) {
                         val deviceName = device.name.trim { it <= ' ' }
                         Log.d("search_test", "onReceive: yes")
-//                    dialog.dismiss()
+                    dialog.dismiss()
                         viewmodel.addavailableDevice(MyDeviceModel(deviceName, device))
                     }
                 }
@@ -140,7 +141,7 @@ class SearchDeviceActivity : AppCompatActivity(), PairHandler {
 
 
     companion object{
-        val REQUEST_ALL_PERMISSIONS = 100
+        const val REQUEST_ALL_PERMISSIONS = 100
 
         val PERMISSIONS = arrayOf(
             Manifest.permission.ACCESS_FINE_LOCATION,

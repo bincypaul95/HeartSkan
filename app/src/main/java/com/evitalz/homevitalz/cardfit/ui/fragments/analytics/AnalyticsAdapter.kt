@@ -11,6 +11,7 @@ import com.evitalz.homevitalz.cardfit.R
 import com.evitalz.homevitalz.cardfit.database.Device_Readings
 import com.evitalz.homevitalz.cardfit.databinding.RowAnalyticsbgBinding
 import com.evitalz.homevitalz.cardfit.databinding.RowAnalyticshrBinding
+import com.evitalz.homevitalz.cardfit.databinding.RowAnalyticsspo2Binding
 
 
 class AnalyticsAdapter internal constructor(
@@ -21,6 +22,7 @@ class AnalyticsAdapter internal constructor(
 
     private val TYPE_HEARTRATE = 5
     private val TYPE_GLUCOSE = 6
+    private val TYPE_SPO2 = 7
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     var devicereadings = emptyList<Device_Readings>()
@@ -35,6 +37,10 @@ class AnalyticsAdapter internal constructor(
             TYPE_GLUCOSE ->{
                 val binding: RowAnalyticsbgBinding = DataBindingUtil.inflate(inflater, R.layout.row_analyticsbg, parent, false)
                 AnalyticsViewholderBG(binding)
+            }
+            TYPE_SPO2 ->{
+                val binding: RowAnalyticsspo2Binding = DataBindingUtil.inflate(inflater, R.layout.row_analyticsspo2, parent, false)
+                AnalyticsViewholderspo2(binding)
             }
             else -> {
                 val binding: RowAnalyticsbgBinding = DataBindingUtil.inflate(inflater, R.layout.row_analyticsbg, parent, false)
@@ -130,6 +136,25 @@ class AnalyticsAdapter internal constructor(
             holder.binding.executePendingBindings()
         }
 
+        if (getItemViewType(position) == TYPE_SPO2) {
+            (holder as AnalyticsViewholderspo2)
+            holder.binding.setVariable(BR.devicereadings,devicereadings[position])
+//            devicereadings[position].dread2.toFloat().let {
+//                when {
+//                    it in 60.0..100.0 -> holder.binding.ivCircle.setImageResource(
+//                            R.drawable.greencircle
+//                    )
+//                    it < 60-> holder.binding.ivCircle.setImageResource(
+//                            R.drawable.yellowcircle
+//                    )
+//                    it > 100 -> holder.binding.ivCircle.setImageResource(
+//                            R.drawable.circle
+//                    )
+//                }
+//            }
+            holder.binding.executePendingBindings()
+        }
+
 
     }
 
@@ -137,6 +162,7 @@ class AnalyticsAdapter internal constructor(
         when(devicereadings[position].dtype) {
             "ECG" ->return TYPE_HEARTRATE
             "BloodGlucose" ->return TYPE_GLUCOSE
+            "SpO2" ->return  TYPE_SPO2
         }
 
         return super.getItemViewType(position)
