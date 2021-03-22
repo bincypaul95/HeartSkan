@@ -14,6 +14,7 @@ import com.evitalz.homevitalz.cardfit.R
 import com.evitalz.homevitalz.cardfit.Utility
 import com.evitalz.homevitalz.cardfit.databinding.ActivityConnectDeviceBinding
 import com.evitalz.homevitalz.cardfit.databinding.ConnectDialogBinding
+import com.evitalz.homevitalz.cardfit.ui.activities.spo2.DataReceiverSpo2Activity
 import com.evitalz.homevitalz.cardfit.ui.model.MyDeviceModel
 import com.evitalz.homevitalz.cardfit.ui.viewmodels.ConnectDeviceViewModel
 
@@ -136,7 +137,7 @@ import com.evitalz.homevitalz.cardfit.ui.viewmodels.ConnectDeviceViewModel
     override fun onConnectClicked(view: View) {
         when(binding.tvdevname.text.toString()){
             "TNG SPO2"->{
-
+                startActivity(Intent(this, DataReceiverSpo2Activity::class.java))
             }else->{
                startActivity(Intent(this, DataReceiverActivity::class.java))
             }

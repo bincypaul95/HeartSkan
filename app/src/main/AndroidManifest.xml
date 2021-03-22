@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Spo2PulseRate">
-        <activity android:name=".ui.activities.spo2.ConnectSpo2Activity"></activity>
-        <activity android:name=".ui.activities.login.RecoverPasswordActivity"></activity>
+        <activity android:name=".ui.activities.spo2.DataReceiverSpo2Activity"
+            android:label="Oxygen Saturation  "
+            android:theme="@style/Theme.Spo2PulseRateActionbar"></activity>
+        <activity android:name=".ui.activities.spo2.ConnectSpo2Activity" />
+        <activity android:name=".ui.activities.login.RecoverPasswordActivity" />
         <activity android:name=".RfTestActivity" />
         <activity
             android:name=".ui.activities.userinfo.AddNewPatientActivity"
@@ -87,7 +90,7 @@
             android:name=".ui.activities.home.HomeActivity"
             android:label="@string/title_activity_home" />
         <activity android:name=".MainActivity" />
-
+        <service android:name=".ui.activities.spo2.BluetoothLeService1" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

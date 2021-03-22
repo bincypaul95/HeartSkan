@@ -61,7 +61,7 @@ class BloodGlucoseFragment : Fragment(){
         context?.registerReceiver(receiver1, IntentFilter("UserChanged"))
     }
 
-    val receiver1 =object : BroadcastReceiver(){
+    private val receiver1 =object : BroadcastReceiver(){
         override fun onReceive(p0: Context?, p1: Intent?) {
             Log.d("broadcast" , "onreceived")
             viewModel.changeDate(viewModel.currentCal.time, viewModel.currentCal.time)

@@ -202,7 +202,6 @@
     <string name="searching_devices_make_sure_the_device_is_on">Searching Devices. Make sure the device is on.</string>
     <string name="device_not_found">Device Not Found</string>
     <string name="confirm_data_to_store">Confirm Data to Store</string>
-    <string name="heartrate">HeartRate</string>
     <string name="save">SAVE</string>
     <string name="postprandial">Postprandial</string>
     <string name="random">Random</string>
@@ -314,5 +313,6 @@ We have no control over and assume no responsibility for the content, privacy po
     <string name="changes_to_this_privacy_policy2">We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</string>
     <string name="changes_to_this_privacy_policy3">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</string>
     <string name="oxygen_saturation">Oxygen Saturation</string>
+    <string name="heartrate">HeartRate</string>
 
 </resources>

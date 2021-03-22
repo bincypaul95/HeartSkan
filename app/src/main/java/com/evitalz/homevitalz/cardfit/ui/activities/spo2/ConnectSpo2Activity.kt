@@ -152,6 +152,6 @@ class ConnectSpo2Activity : AppCompatActivity(), HandlerDeviceConnect {
     }
 
     override fun onConnectClicked(view: View) {
-        TODO("Not yet implemented")
+            startActivity(Intent(this, DataReceiverSpo2Activity::class.java))
     }
 }
