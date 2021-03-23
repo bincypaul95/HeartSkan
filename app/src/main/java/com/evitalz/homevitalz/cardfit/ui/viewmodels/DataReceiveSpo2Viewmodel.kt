@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.evitalz.homevitalz.cardfit.api.ApiManager
 import com.evitalz.homevitalz.cardfit.database.DeviceReadingsRepository
 import com.evitalz.homevitalz.cardfit.database.Device_Readings
 import com.evitalz.homevitalz.cardfit.database.Spo2Database
@@ -36,7 +37,8 @@ class DataReceiveSpo2Viewmodel(application: Application): AndroidViewModel(appli
     }
 
     fun insertreadings(deviceReadings: Device_Readings) = viewModelScope.launch(Dispatchers.IO){
-        repository.insertdevicereadings(deviceReadings)
+        val rowId = repository.insertdevicereadings(deviceReadings)
+        ApiManager.insertdata(rowId , getApplication())
     }
 
     fun insertlog(log: Log) = viewModelScope.launch(Dispatchers.IO){

@@ -1,5 +1,6 @@
 package com.evitalz.homevitalz.cardfit.ui.activities.spo2
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
@@ -19,6 +20,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.evitalz.homevitalz.cardfit.R
 import com.evitalz.homevitalz.cardfit.BR
+import com.evitalz.homevitalz.cardfit.Utility
 import com.evitalz.homevitalz.cardfit.database.Device_Readings
 import com.evitalz.homevitalz.cardfit.databinding.ActivityDataReceiverSpo2Binding
 import com.evitalz.homevitalz.cardfit.ui.activities.spo2.BluetoothLeService1.*
@@ -59,6 +61,7 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
     private var type = "Pulse Oximeter"
     var data_received = false
     var progressDialog: ProgressDialog? = null
+    @SuppressLint("SimpleDateFormat")
     var format = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     private val mScanning = false
     var referenceval: Long = 0
@@ -137,6 +140,15 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
         return intentFilter
     }
 
+    override fun onPause() {
+        super.onPause()
+//        unregisterReceiver(mGattUpdateReceiver)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+//        unregisterReceiver(mGattUpdateReceiver)
+    }
     private val mGattUpdateReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             Log.d("bluetooth_test", intent.action.toString())
@@ -191,11 +203,11 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
                 currentDevice?.let {
                     bluetoothLeService!!.connect(it.address, it.name, type)
                 }
-            } else if (ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
+            } else if (ACTION_GATT_SERVICES_DISCOVERED == action) {
 
-            } else if (ACTION_DATA_AVAILABLE.equals(action)) {
+            } else if (ACTION_DATA_AVAILABLE == action) {
 
-            } else if (ACTION_DATA_NOT_AVAILABLE.equals(action)) {
+            } else if (ACTION_DATA_NOT_AVAILABLE == action) {
 
                 Toast.makeText(
                     context,
@@ -211,18 +223,18 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
                     finish()
                 })
 
-            } else if (ACTION_CHECKING_DATA.equals(action)) {
+            } else if (ACTION_CHECKING_DATA == action) {
 
-            } else if (ACTION_SETTING_DEVICE_DATE.equals(action)) {
+            } else if (ACTION_SETTING_DEVICE_DATE == action) {
 
                 Toast.makeText(
                     context,
                     resources.getString(R.string.SettingDeviceDate),
                     Toast.LENGTH_SHORT
                 ).show()
-            } else if (ACTION_CLEARING_DATA.equals(action)) {
+            } else if (ACTION_CLEARING_DATA == action) {
 
-            } else if (MISMATCH_READING.equals(action)) {
+            } else if (MISMATCH_READING == action) {
 
                 val info_dialog = Info_Dialog(
                     this@DataReceiverSpo2Activity,
@@ -264,14 +276,16 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
                 hrvlist.add(intent.getIntExtra(PARAM_PULSE, 0))
                 viewModel.deviceDataResult.value =
                     DeviceData(val11, val2, System.currentTimeMillis() - ms, pi = pi)
-//                viewModel.insertreadings(
-//                    Device_Readings(
-//                        0,
-//                        val2,
-//                        val11, pi.toString(),
-//                        Calendar.getInstance().time.time
-//                    )
-//                )
+
+                val deviceReadings = Device_Readings(
+                        0, 1, Utility.getpregid(application),
+                       val2,
+                        val11,
+                        "", "", Calendar.getInstance().time.time, 0,"SpO2", 7, 1, "",
+                        "", "",
+                        Calendar.getInstance().time.time
+                )
+                viewModel.insertreadings(deviceReadings)
 
 
             } else if (action == ACTION_CONTINUOUS_DATA) {
@@ -287,8 +301,8 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
                 intent.getStringExtra("MANUF")
                 val11 = intent.getStringExtra("VAL1").toString()
                 val2 = intent.getStringExtra("VAL2").toString()
-                Log.d("bluetooth_test_data", val11!!)
-                Log.d("bluetooth_test_data", val2!!)
+                Log.d("bluetooth_test_data", val11)
+                Log.d("bluetooth_test_data", val2)
                 val val3 = intent.getStringExtra("VAL3")
                 val val4 = intent.getStringExtra("VAL4")
                 val val5 = ""
@@ -361,9 +375,9 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
             }
             var bageok = false
             while (save_pointer != get_pointer) {
-                if ((cmdData.get(get_pointer)).equals(0x55)) {
-                    val t: Byte = cmdData.get((get_pointer + 1) % cmdData.size)
-                    if (t > 4 && readbyes >= t) {
+                if ((cmdData[get_pointer]).equals(0x55)) {
+                    val t: Byte = cmdData[(get_pointer + 1) % cmdData.size]
+                    if (t in 5..readbyes) {
                         bageok = true
                         break
                     } else {
@@ -395,9 +409,7 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
                         builder.append(String.format("%02X ", Data[i]))
                     }
                     notifyString = builder.toString()
-                    if (mHandler != null) {
-                        mHandler.sendEmptyMessage(8)
-                    }
+                    mHandler?.sendEmptyMessage(8)
                     try {
                         Thread.sleep(1000)
                     } catch (e: InterruptedException) {
@@ -463,23 +475,21 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
         binding.chart.axisRight.isEnabled = false
         binding.chart.description.isEnabled = false
         binding.chart.setTouchEnabled(true)
-        binding.chart.setDragEnabled(true)
+        binding.chart.isDragEnabled = true
         binding.chart.setScaleEnabled(true)
         binding.chart.setPinchZoom(true)
         binding.chart.setDrawGridBackground(false)
-        binding.chart.setMaxHighlightDistance(300f)
-        binding.chart.getXAxis().setValueFormatter(
-            MyAxisValueFormatter(
+        binding.chart.maxHighlightDistance = 300f
+        binding.chart.xAxis.valueFormatter = MyAxisValueFormatter(
                 Calendar.getInstance().time.time
-            )
         )
         binding.chart.xAxis.setDrawLabels(false)
-        binding.chart.getXAxis().setLabelCount(0)
-        binding.chart.getXAxis().setDrawGridLines(false)
-        binding.chart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM)
-        binding.chart.getXAxis().setAxisLineColor(Color.blue(200))
-        binding.chart.getXAxis().setGranularity(4f) // only intervals of 1 day
-        binding.chart.getXAxis().setTextSize(8f)
+        binding.chart.xAxis.labelCount = 0
+        binding.chart.xAxis.setDrawGridLines(false)
+        binding.chart.xAxis.position = XAxis.XAxisPosition.BOTTOM
+        binding.chart.xAxis.axisLineColor = Color.blue(200)
+        binding.chart.xAxis.granularity = 4f // only intervals of 1 day
+        binding.chart.xAxis.textSize = 8f
 
 //        val y: YAxis = binding.chart.getAxisLeft()
 //        y.setDrawLabels(true)
@@ -504,16 +514,16 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
         lineData!!.setValueTextSize(8f)
         lineData!!.setDrawValues(false)
         lineData!!.setValueFormatter(MyValueFormatter())
-        dataSets!!.setCubicIntensity(1.0f)
+        dataSets!!.cubicIntensity = 1.0f
         dataSets!!.setDrawIcons(false)
         dataSets!!.setDrawCircleHole(false)
-        dataSets!!.setLineWidth(2f)
+        dataSets!!.lineWidth = 2f
         dataSets!!.setDrawCircles(false)
-        dataSets!!.setCircleRadius(0f)
+        dataSets!!.circleRadius = 0f
         dataSets!!.setDrawFilled(false)
-        dataSets!!.setFormLineWidth(1f)
-        dataSets!!.setFormLineDashEffect(DashPathEffect(floatArrayOf(10f, 5f), 0f))
-        dataSets!!.setFormSize(15f)
+        dataSets!!.formLineWidth = 1f
+        dataSets!!.formLineDashEffect = DashPathEffect(floatArrayOf(10f, 5f), 0f)
+        dataSets!!.formSize = 15f
 
         dataSets!!.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER)
         dataSets!!.setColor(Color.BLUE)
