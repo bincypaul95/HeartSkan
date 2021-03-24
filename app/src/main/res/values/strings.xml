@@ -314,5 +314,8 @@ We have no control over and assume no responsibility for the content, privacy po
     <string name="changes_to_this_privacy_policy3">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</string>
     <string name="oxygen_saturation">Oxygen Saturation</string>
     <string name="heartrate">HeartRate</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
 </resources>

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -15,9 +16,11 @@ import android.view.View
 import android.view.Window
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -41,6 +44,11 @@ import com.evitalz.homevitalz.cardfit.ui.activities.menuactivity.AboutusActivity
 import com.evitalz.homevitalz.cardfit.ui.activities.menuactivity.TermsandConditionsActivity
 
 import com.evitalz.homevitalz.cardfit.ui.activities.userinfo.UserInfoActivity
+import com.evitalz.homevitalz.cardfit.ui.fragments.analytics.AnalyticsFragment
+import com.evitalz.homevitalz.cardfit.ui.fragments.analytics.MyPagerAdapter
+import com.evitalz.homevitalz.cardfit.ui.fragments.home.HomeFragment
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.navheader.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -56,6 +64,7 @@ class HomeActivity : AppCompatActivity(), HandlerAddnew {
     var patientid =  ArrayList<Int>()
     var age :Int =0
     var gender :Int =5
+    var fragment: Fragment? = null
     lateinit var dialog:Dialog
     private lateinit var preferences: SharedPreferences
     lateinit var patientdataAdapter : ArrayAdapter<String>
@@ -123,15 +132,54 @@ class HomeActivity : AppCompatActivity(), HandlerAddnew {
             }
         })
 
-        val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-            )
-        )
+//        val navController = findNavController(R.id.nav_host_fragment)
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+//            )
+//        )
         setSupportActionBar(binding.toolbar)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        binding.navView.setupWithNavController(navController)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+//        binding.navView.setupWithNavController(navController)
+//        val viewPagerAdapter = HomePagerAdapter(this)
+//        binding.viewPager.adapter = viewPagerAdapter
+//        TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ -> }.attach()
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                    .beginTransaction()
+                    .add(R.id.framelayout, HomeFragment(), "home_fragment")
+                    .addToBackStack(null)
+                    .commit()
+        }
+        binding.tabLayouthome.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+              when(tab?.text){
+                  getString(R.string.home) ->{
+                      fragment = if (supportFragmentManager.findFragmentByTag("home_fragment") == null)
+                          HomeFragment()
+                      else supportFragmentManager.findFragmentByTag("home_fragment")
+                      loadFragment(fragment, "home_fragment")
+                  }
+                  getString(R.string.analytics) ->{
+                      fragment = if (supportFragmentManager.findFragmentByTag("analytics_fragment") == null) AnalyticsFragment()
+                      else supportFragmentManager.findFragmentByTag("analytics_fragment")
+                      loadFragment(fragment, "analytics_fragment")
+                  }
+              }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
+
+        }
+
+        )
 
         val navigationView = findViewById<NavigationView>(R.id.nav_sideview)
         val hView = navigationView.getHeaderView(0)
@@ -305,9 +353,18 @@ class HomeActivity : AppCompatActivity(), HandlerAddnew {
         val ageInt = age
         return ageInt
     }
-
-
-
-
-
+    private fun loadFragment(
+            fragment: Fragment?,
+            tag: String
+    ): Boolean {
+        if (fragment != null) {
+            supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.framelayout, fragment, tag)
+                    .addToBackStack(null)
+                    .commit()
+            return true
+        }
+        return false
+    }
 }

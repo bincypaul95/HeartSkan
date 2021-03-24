@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvtime"
-            android:text="@{devicereadings.formattedTime}"
+            android:text="@{devicereadings.formattedTimesec}"
             android:padding="5dp"
             android:layout_gravity="center"
             android:textAlignment="center"

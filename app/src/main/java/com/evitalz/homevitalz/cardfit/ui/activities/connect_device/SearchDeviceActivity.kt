@@ -240,7 +240,7 @@ class SearchDeviceActivity : AppCompatActivity(), PairHandler {
     private fun showMessageDialog() {
         dialog = Dialog(this@SearchDeviceActivity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
+        dialog.setCancelable(true)
         dialogBinding = ConnectDialogBinding.inflate(layoutInflater)
         dialog.setContentView(dialogBinding.root)
         val display = windowManager.defaultDisplay

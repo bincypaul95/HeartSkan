@@ -36,6 +36,7 @@ class Device_Readings(
 
     companion object {
         val formatter = SimpleDateFormat("hh:mm a", Locale.getDefault())
+        val formatter1 = SimpleDateFormat("hh:mm:ss", Locale.getDefault())
         val dateformatter = SimpleDateFormat("dd MMM", Locale.getDefault())
         val formatterMonth = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
     }
@@ -51,6 +52,11 @@ class Device_Readings(
     fun getFormattedTime(): String {
         val date = Date(datetime)
         return formatter.format(date)
+    }
+
+    fun getFormattedTimesec(): String {
+        val date = Date(datetime)
+        return formatter1.format(date)
     }
 
     fun getFormattedDate(): String {

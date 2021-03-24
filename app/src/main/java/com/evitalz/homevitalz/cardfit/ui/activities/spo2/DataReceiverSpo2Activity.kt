@@ -525,8 +525,8 @@ class DataReceiverSpo2Activity : AppCompatActivity() {
         dataSets!!.formLineDashEffect = DashPathEffect(floatArrayOf(10f, 5f), 0f)
         dataSets!!.formSize = 15f
 
-        dataSets!!.setMode(LineDataSet.Mode.HORIZONTAL_BEZIER)
-        dataSets!!.setColor(Color.BLUE)
+        dataSets!!.mode = LineDataSet.Mode.HORIZONTAL_BEZIER
+        dataSets!!.color = Color.BLUE
         dataSets!!.setCircleColors(Color.BLUE)
 
 

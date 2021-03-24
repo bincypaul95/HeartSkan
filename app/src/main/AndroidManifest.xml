@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Spo2PulseRate">
-        <activity android:name=".ui.activities.spo2.DataReceiverSpo2Activity"
+        <activity
+            android:name=".ui.activities.home.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Spo2PulseRate.NoActionBar"></activity>
+        <activity
+            android:name=".ui.activities.spo2.DataReceiverSpo2Activity"
             android:label="Oxygen Saturation  "
-            android:theme="@style/Theme.Spo2PulseRateActionbar"></activity>
+            android:theme="@style/Theme.Spo2PulseRateActionbar" />
         <activity android:name=".ui.activities.spo2.ConnectSpo2Activity" />
         <activity android:name=".ui.activities.login.RecoverPasswordActivity" />
         <activity android:name=".RfTestActivity" />
@@ -22,7 +27,7 @@
         <activity android:name=".ui.activities.menuactivity.TermsandConditionsActivity" />
         <activity android:name=".ui.activities.menuactivity.AboutusActivity" />
         <activity
-            android:name=".EditUserInfo"
+            android:name=".ui.activities.userinfo.EditUserInfo"
             android:label="Edit Patient Details"
             android:theme="@style/Theme.Spo2PulseRateActionbar" />
         <activity
@@ -88,9 +93,9 @@
             android:theme="@style/Theme.Spo2PulseRateActionbar" />
         <activity
             android:name=".ui.activities.home.HomeActivity"
-            android:label="@string/title_activity_home" />
+            android:label="FabFit" />
         <activity android:name=".MainActivity" />
-        <service android:name=".ui.activities.spo2.BluetoothLeService1" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -100,6 +105,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
         </provider>
+
+        <service android:name=".ui.activities.spo2.BluetoothLeService1" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
