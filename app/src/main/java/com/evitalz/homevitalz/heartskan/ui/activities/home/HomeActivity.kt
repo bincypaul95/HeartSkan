@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -16,6 +17,7 @@ import android.view.View
 import android.view.Window
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -144,6 +146,7 @@ class HomeActivity : AppCompatActivity(), HandlerAddnew {
         }
         binding.tabLayouthome.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
+            @RequiresApi(Build.VERSION_CODES.M)
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when (tab?.text) {
                     getString(R.string.home) -> {
@@ -203,7 +206,7 @@ class HomeActivity : AppCompatActivity(), HandlerAddnew {
                     }
                     R.id.nav_order -> {
                         val intent = Intent(Intent.ACTION_VIEW)
-                        intent.setData(Uri.parse("https://shop.evitalz.com"))
+                        intent.data = Uri.parse("https://shop.evitalz.com")
                         startActivity(intent)
                     }
                     R.id.nav_support -> {

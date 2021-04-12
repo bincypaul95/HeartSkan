@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.*
 import android.widget.DatePicker
 import android.widget.LinearLayout
+import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil

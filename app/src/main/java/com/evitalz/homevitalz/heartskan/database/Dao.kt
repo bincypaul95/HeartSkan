@@ -11,10 +11,10 @@ import com.evitalz.homevitalz.heartskan.ui.activities.home.Patientnameid
 @Dao
 interface DeviceReadingdao{
 
-    @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE !='BLOODGLUCOSE' ORDER BY Date_time ASC")
+    @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE !='BloodGlucose' and  TYPE !='SpO2' ORDER BY Date_time ASC")
     fun getDeviceReadings( ms : Long , endMs : Long,pregid :Int) : LiveData<List<Device_Readings>>
 
-    @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE !='BLOODGLUCOSE' ORDER BY Date_time DESC")
+    @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE !='BloodGlucose' and  TYPE !='SpO2' ORDER BY Date_time DESC")
     fun getDeviceReadingsdesc( ms : Long , endMs : Long,pregid :Int) : LiveData<List<Device_Readings>>
 
     @Query("select * from Device_Readings where date(Date_time/1000 , 'unixepoch') >= date(:ms / 1000 , 'unixepoch') and date(Date_time/1000 , 'unixepoch') <= date(:endMs / 1000 , 'unixepoch') and P_id=:pregid and TYPE LIKE 'ECG'  ORDER BY Date_time ASC")
