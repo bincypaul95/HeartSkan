@@ -10,6 +10,8 @@ import androidx.lifecycle.viewModelScope
 import com.evitalz.homevitalz.heartskan.database.*
 import com.google.gson.GsonBuilder
 import com.evitalz.homevitalz.heartskan.Utility
+import com.evitalz.homevitalz.heartskan.api.ApiManager
+import com.evitalz.homevitalz.heartskan.api.ApiManager.insertpatientdetails
 import com.evitalz.homevitalz.heartskan.api.RestApi
 import com.evitalz.homevitalz.heartskan.ui.activities.login.addnewpatient
 import kotlinx.coroutines.Dispatchers
@@ -78,6 +80,12 @@ class homeactivityviewmodel(application: Application):AndroidViewModel(applicati
                 "","","","","","","","","","",Calendar.getInstance().timeInMillis
             )
             )
+
+            val patientdetails = Patient_details(0,jsonobject1.getInt("Value"),"",0,0,
+                    0,0,"",0,"","",0,Calendar.getInstance().timeInMillis,"")
+            ApiManager.insertpatientdetails(
+                    getApplication(),"",jsonobject1.getInt("Value"), "", "","", "")
+            insertpatientdetails(patientdetails)
         }
 
     }
@@ -88,6 +96,10 @@ class homeactivityviewmodel(application: Application):AndroidViewModel(applicati
 
     fun updatedevicereadings(deviceReadings: Device_Readings) = viewModelScope.launch(Dispatchers.IO){
         deviceReadingsRepository.updatedevicereadingslocal(deviceReadings)
+    }
+    fun insertpatientdetails(patient_Details: Patient_details) = viewModelScope.launch(Dispatchers.IO){
+
+        patientRepository.insertpatientdetails(patient_Details)
     }
 
 

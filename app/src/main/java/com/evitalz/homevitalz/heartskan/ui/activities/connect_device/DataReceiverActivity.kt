@@ -362,7 +362,7 @@ class DataReceiverActivity : AppCompatActivity(), ICallBack, DialogHandler, Dial
 
     override fun onLeftHandClicked(view: View) {
 
-        deviceplacementBinding.ivlefthand.setBackgroundColor(Color.BLUE)
+        deviceplacementBinding.ivlefthand.setBackgroundColor(resources.getColor(R.color.purple_700))
         deviceplacementBinding.ivleftwrist.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivleftleg.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivchest.setBackgroundColor(resources.getColor(R.color.gray))
@@ -371,7 +371,7 @@ class DataReceiverActivity : AppCompatActivity(), ICallBack, DialogHandler, Dial
 
     override fun onLeftWristClicked(view: View) {
 
-        deviceplacementBinding.ivleftwrist.setBackgroundColor(Color.BLUE)
+        deviceplacementBinding.ivleftwrist.setBackgroundColor(resources.getColor(R.color.purple_700))
         deviceplacementBinding.ivlefthand.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivleftleg.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivchest.setBackgroundColor(resources.getColor(R.color.gray))
@@ -379,7 +379,7 @@ class DataReceiverActivity : AppCompatActivity(), ICallBack, DialogHandler, Dial
     }
 
     override fun onLeftLegClicked(view: View) {
-        deviceplacementBinding.ivleftleg.setBackgroundColor(Color.BLUE)
+        deviceplacementBinding.ivleftleg.setBackgroundColor(resources.getColor(R.color.purple_700))
         deviceplacementBinding.ivleftwrist.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivlefthand.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivchest.setBackgroundColor(resources.getColor(R.color.gray))
@@ -387,7 +387,7 @@ class DataReceiverActivity : AppCompatActivity(), ICallBack, DialogHandler, Dial
     }
 
     override fun onChestClicked(view: View) {
-        deviceplacementBinding.ivchest.setBackgroundColor(Color.BLUE)
+        deviceplacementBinding.ivchest.setBackgroundColor(resources.getColor(R.color.purple_700))
         deviceplacementBinding.ivleftwrist.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivleftleg.setBackgroundColor(resources.getColor(R.color.gray))
         deviceplacementBinding.ivlefthand.setBackgroundColor(resources.getColor(R.color.gray))

@@ -117,7 +117,7 @@ class AnalyticsFragment : Fragment(), HandlerAnalytics {
                 it.type = viewModel.selecteddays
             }
             Log.d("chart_test", "${it.size}")
-            if(binding.viewPager.currentItem == 0) {
+            if(binding.viewPager.currentItem == 1) {
                 adapter.devicereadings = it
                 adapter.notifyDataSetChanged()
             }
@@ -129,7 +129,7 @@ class AnalyticsFragment : Fragment(), HandlerAnalytics {
                 it.type = viewModel.selecteddays
             }
             Log.d("chart_test", "${it.size}")
-            if(binding.viewPager.currentItem == 1) {
+            if(binding.viewPager.currentItem == 0) {
                 adapter.devicereadings = it
                 adapter.notifyDataSetChanged()
             }
