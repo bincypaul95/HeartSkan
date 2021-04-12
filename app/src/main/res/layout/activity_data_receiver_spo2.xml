@@ -6,7 +6,7 @@
     <data>
         <variable
             name="dataModel"
-            type="com.evitalz.homevitalz.cardfit.ui.model.DeviceData" />
+            type="com.evitalz.homevitalz.heartskan.ui.model.DeviceData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

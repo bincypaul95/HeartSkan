@@ -6,7 +6,7 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.AlarmHandler" />
+            type="com.evitalz.homevitalz.heartskan.AlarmHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

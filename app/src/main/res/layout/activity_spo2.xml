@@ -6,10 +6,10 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.viewmodels.Spo2Viewmodel" />
+            type="com.evitalz.homevitalz.heartskan.ui.viewmodels.Spo2Viewmodel" />
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerSpo2" />
+            type="com.evitalz.homevitalz.heartskan.HandlerSpo2" />
     </data>
 
     <ScrollView

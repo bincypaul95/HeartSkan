@@ -8,13 +8,13 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerHome" />
+            type="com.evitalz.homevitalz.heartskan.HandlerHome" />
 
         <import type="android.view.View"/>
 
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.fragments.home.HomeViewModel" />
+            type="com.evitalz.homevitalz.heartskan.ui.fragments.home.HomeViewModel" />
     </data>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -146,6 +146,7 @@
                             android:src="@drawable/pulse1"
                             fab:fab_colorNormal="#da4336"
                             fab:fab_size="mini"
+                            android:visibility="gone"
                             android:onClick="@{handler::onSpo2Clicked}"
                             fab:fab_label="@string/SpO2"
                             />

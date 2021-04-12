@@ -14,7 +14,7 @@
         <import type="android.view.View"/>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerDeviceConnect" />
+            type="com.evitalz.homevitalz.heartskan.HandlerDeviceConnect" />
 
     </data>
 

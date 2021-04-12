@@ -6,19 +6,19 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.UserInfoHandler" />
+            type="com.evitalz.homevitalz.heartskan.UserInfoHandler" />
 
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.activities.userinfo.EditUserInfoViewModel" />
+            type="com.evitalz.homevitalz.heartskan.ui.activities.userinfo.EditUserInfoViewModel" />
 
         <variable
             name="patient"
-            type="com.evitalz.homevitalz.cardfit.database.Patient_Reg" />
+            type="com.evitalz.homevitalz.heartskan.database.Patient_Reg" />
 
         <variable
             name="patientdetails"
-            type="com.evitalz.homevitalz.cardfit.database.Patient_details" />
+            type="com.evitalz.homevitalz.heartskan.database.Patient_details" />
 
 
     </data>

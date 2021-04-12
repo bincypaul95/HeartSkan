@@ -29,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/tvcase"/>
 
-            <com.evitalz.homevitalz.cardfit.ui.activities.connect_device.ZoomableImageView
+            <com.evitalz.homevitalz.heartskan.ui.activities.connect_device.ZoomableImageView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:id="@+id/zoomableimage"

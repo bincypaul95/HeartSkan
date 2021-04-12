@@ -7,7 +7,7 @@
 
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerAddnew" />
+            type="com.evitalz.homevitalz.heartskan.HandlerAddnew" />
     </data>
 
     <ScrollView

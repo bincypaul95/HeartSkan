@@ -6,7 +6,7 @@
 
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.LoginHandler" />
+            type="com.evitalz.homevitalz.heartskan.LoginHandler" />
 
     </data>
 

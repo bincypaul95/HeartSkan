@@ -5,11 +5,11 @@
     <data>
         <variable
             name="devicemodel"
-            type="com.evitalz.homevitalz.cardfit.ui.model.MyDeviceModel" />
+            type="com.evitalz.homevitalz.heartskan.ui.model.MyDeviceModel" />
         <import type="android.view.View"/>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerDeviceConnect" />
+            type="com.evitalz.homevitalz.heartskan.HandlerDeviceConnect" />
     </data>
 
     <LinearLayout

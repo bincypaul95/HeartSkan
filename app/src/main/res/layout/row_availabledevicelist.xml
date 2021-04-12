@@ -5,11 +5,11 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.PairDeviceHandler" />
+            type="com.evitalz.homevitalz.heartskan.PairDeviceHandler" />
 
         <variable
             name="deviceModel"
-            type="com.evitalz.homevitalz.cardfit.ui.model.MyDeviceModel" />
+            type="com.evitalz.homevitalz.heartskan.ui.model.MyDeviceModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

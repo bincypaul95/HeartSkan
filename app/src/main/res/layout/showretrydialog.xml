@@ -5,7 +5,7 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.DialogRetryHandler" />
+            type="com.evitalz.homevitalz.heartskan.DialogRetryHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

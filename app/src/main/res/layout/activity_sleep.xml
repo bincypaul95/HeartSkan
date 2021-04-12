@@ -6,11 +6,11 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerSleep" />
+            type="com.evitalz.homevitalz.heartskan.HandlerSleep" />
 
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.viewmodels.SleepViewmodel" />
+            type="com.evitalz.homevitalz.heartskan.ui.viewmodels.SleepViewmodel" />
     </data>
 
     <ScrollView

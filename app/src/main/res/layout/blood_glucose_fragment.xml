@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.evitalz.homevitalz.cardfit.ui.fragments.analytics.AnalyticsViewModel" />
+            type="com.evitalz.homevitalz.heartskan.ui.fragments.analytics.AnalyticsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -7,11 +7,11 @@
 
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerBG" />
+            type="com.evitalz.homevitalz.heartskan.HandlerBG" />
 
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.viewmodels.GlucoseViewmodel" />
+            type="com.evitalz.homevitalz.heartskan.ui.viewmodels.GlucoseViewmodel" />
 
     </data>
 

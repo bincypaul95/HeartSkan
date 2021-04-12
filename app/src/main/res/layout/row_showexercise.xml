@@ -7,11 +7,11 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerShowTimeline" />
+            type="com.evitalz.homevitalz.heartskan.HandlerShowTimeline" />
 
         <variable
             name="devicereadings"
-            type="com.evitalz.homevitalz.cardfit.database.Device_Readings" />
+            type="com.evitalz.homevitalz.heartskan.database.Device_Readings" />
     </data>
 
     <LinearLayout

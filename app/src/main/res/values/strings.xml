@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fab  Fit</string>
+    <string name="app_name">HeartSkan</string>
     <string name="title_activity_home">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Analytics</string>

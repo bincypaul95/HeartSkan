@@ -6,10 +6,10 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.Handlerpilltaken" />
+            type="com.evitalz.homevitalz.heartskan.Handlerpilltaken" />
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.viewmodels.PilltakenViewmodel" />
+            type="com.evitalz.homevitalz.heartskan.ui.viewmodels.PilltakenViewmodel" />
     </data>
 
     <ScrollView

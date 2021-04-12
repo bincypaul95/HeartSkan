@@ -6,7 +6,7 @@
 
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.DialogDevicePlacementHandler" />
+            type="com.evitalz.homevitalz.heartskan.DialogDevicePlacementHandler" />
 
     </data>
 

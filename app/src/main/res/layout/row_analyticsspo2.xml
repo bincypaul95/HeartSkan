@@ -5,7 +5,7 @@
     <data>
         <variable
             name="devicereadings"
-            type="com.evitalz.homevitalz.cardfit.database.Device_Readings" />
+            type="com.evitalz.homevitalz.heartskan.database.Device_Readings" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

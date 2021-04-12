@@ -7,7 +7,7 @@
 
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerQuestions" />
+            type="com.evitalz.homevitalz.heartskan.HandlerQuestions" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

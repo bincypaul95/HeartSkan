@@ -6,11 +6,11 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerLiquor" />
+            type="com.evitalz.homevitalz.heartskan.HandlerLiquor" />
 
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.viewmodels.LiquorViewmodel" />
+            type="com.evitalz.homevitalz.heartskan.ui.viewmodels.LiquorViewmodel" />
     </data>
 
     <ScrollView

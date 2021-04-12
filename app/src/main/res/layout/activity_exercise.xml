@@ -7,11 +7,11 @@
 
             <variable
                 name="handler"
-                type="com.evitalz.homevitalz.cardfit.HandlerExcersice" />
+                type="com.evitalz.homevitalz.heartskan.HandlerExcersice" />
 
            <variable
                name="viewmodel"
-               type="com.evitalz.homevitalz.cardfit.ui.viewmodels.ExcersiceViewModel" />
+               type="com.evitalz.homevitalz.heartskan.ui.viewmodels.ExcersiceViewModel" />
 
     </data>
 

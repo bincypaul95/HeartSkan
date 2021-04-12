@@ -6,15 +6,15 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.UserInfoHandler" />
+            type="com.evitalz.homevitalz.heartskan.UserInfoHandler" />
 
         <variable
             name="viewmodel"
-            type="com.evitalz.homevitalz.cardfit.ui.activities.userinfo.UserInfoViewmodel" />
+            type="com.evitalz.homevitalz.heartskan.ui.activities.userinfo.UserInfoViewmodel" />
 
         <variable
             name="patient"
-            type="com.evitalz.homevitalz.cardfit.database.ProfileDetails" />
+            type="com.evitalz.homevitalz.heartskan.database.ProfileDetails" />
     </data>
 
     <ScrollView

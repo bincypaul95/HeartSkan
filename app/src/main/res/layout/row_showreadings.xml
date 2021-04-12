@@ -5,10 +5,10 @@
     <data>
         <variable
             name="devicereadings"
-            type="com.evitalz.homevitalz.cardfit.database.Device_Readings" />
+            type="com.evitalz.homevitalz.heartskan.database.Device_Readings" />
         <variable
             name="handlerreading"
-            type="com.evitalz.homevitalz.cardfit.HandlerShowTimeline" />
+            type="com.evitalz.homevitalz.heartskan.HandlerShowTimeline" />
     </data>
 
     <LinearLayout

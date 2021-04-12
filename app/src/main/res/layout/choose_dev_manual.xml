@@ -4,7 +4,7 @@
     <data>
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.HandlerMeasure" />
+            type="com.evitalz.homevitalz.heartskan.HandlerMeasure" />
     </data>
 
     <LinearLayout

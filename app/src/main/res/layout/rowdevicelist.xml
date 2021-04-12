@@ -12,10 +12,10 @@
             type="String" />
         <variable
             name="devicemodel"
-            type="com.evitalz.homevitalz.cardfit.ui.model.MyDeviceModel" />
+            type="com.evitalz.homevitalz.heartskan.ui.model.MyDeviceModel" />
         <variable
             name="handler"
-            type="com.evitalz.homevitalz.cardfit.PairHandler" />
+            type="com.evitalz.homevitalz.heartskan.PairHandler" />
 
 
     </data>
